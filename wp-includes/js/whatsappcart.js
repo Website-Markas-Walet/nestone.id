@@ -10,8 +10,8 @@ function whatsapp(){
     + "Halo NestOne.id, Saya" + "%20" + nama + "%0a"
     + "ingin memesan produk" + "%20" + produk + "%0a"
     + "Total pcs :" + "%20" + pcs + "%0a"
-    + "Harga :" + "%20" + harga;
-    + "Alamat :" + "%20" + alamat + "%0a"
+    + "Harga :" + "%20" + harga + "%0a"
+    + "Alamat :" + "%20" + alamat;
 
     window.open(whatsappurl,"_blank").focus();
 } 
