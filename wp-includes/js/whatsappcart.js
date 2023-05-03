@@ -2,7 +2,6 @@ function whatsapp(){
     var produk = document.getElementById("produk").value;
     var nama = document.getElementById("nama").value;
     var alamat = document.getElementById("alamat").value;
-    var produk = document.getElementById("produk").value;
     var pcs = document.getElementById("pcs").value;
     var harga = document.getElementById("harga").value;
 
