@@ -403,7 +403,59 @@ class="hfeed site" id="page">
 								<div class="elementor-element elementor-element-67b13fe elementor-widget elementor-widget-eael-woo-cart" data-id="67b13fe" data-element_type="widget" data-settings="{&quot;eael_woo_cart_table_components_remove_icon&quot;:{&quot;value&quot;:&quot;fas fa-times&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;eael_woo_cart_components_continue_shopping_icon&quot;:{&quot;value&quot;:&quot;fas fa-chevron-left&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="eael-woo-cart.default">
 				<div class="elementor-widget-container">
 			                <div class="eael-woo-cart-wrapper eael-woo-cart-empty eael-woo-style-2">
-					<div class="woocommerce-notices-wrapper"></div><p class="cart-empty woocommerce-info">Keranjang Anda kosong.</p>	<p class="return-to-shop">
+						<?php
+	if(isset($_POST['submit'])) {
+		$produk = $_POST['produk'];
+		$nama = $_POST['nama'];
+		$alamat = $_POST['alamat'];
+		$kelurahan = $_POST['kelurahan'];
+		$kecamatan = $_POST['kecamatan'];
+		$kota = $_POST['kota'];
+		$provinsi = $_POST['provinsi'];
+		$pos = $_POST['pos'];
+		$pcs = $_POST['pcs'];
+		$harga = $_POST['harga'];
+		$total = $_POST['total'];
+	}
+?>
+
+<table border=1>
+	<tr>
+		<td>Produk</td>
+		<td>:</td>
+		<td><?php echo $produk; ?></td>
+	</tr>
+	<tr>
+		<td>Nama Pembeli</td>
+		<td>:</td>
+		<td><?php echo $nama; ?></td>
+	</tr>
+	<tr>
+		<td>Alamat</td>
+		<td>:</td>
+		<td><?php echo $kelurahan, $alamat, ', ', $kecamatan, ', ', $kota, ', ', $provinsi; ?></td>
+	</tr>
+	<tr>
+		<td>Kode Pos</td>
+		<td>:</td>
+		<td><?php echo $pos; ?></td>
+	</tr>
+	<tr>
+		<td>Total PCS</td>
+		<td>:</td>
+		<td><?php echo $pcs; ?></td>
+	</tr>
+	<tr>
+		<td>Harga Satuan</td>
+		<td>:</td>
+		<td><?php echo $harga; ?></td>
+	</tr>
+	<tr>
+		<td>Total Harga</td>
+		<td>:</td>
+		<td><?php echo $total; ?></td>
+	</tr>
+</table>
 		<a class="button wc-backward wp-element-button" href="../shop/index.html">
 			Return to shop		</a>
 	</p>
