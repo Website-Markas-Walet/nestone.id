@@ -403,59 +403,32 @@ class="hfeed site" id="page">
 								<div class="elementor-element elementor-element-67b13fe elementor-widget elementor-widget-eael-woo-cart" data-id="67b13fe" data-element_type="widget" data-settings="{&quot;eael_woo_cart_table_components_remove_icon&quot;:{&quot;value&quot;:&quot;fas fa-times&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;eael_woo_cart_components_continue_shopping_icon&quot;:{&quot;value&quot;:&quot;fas fa-chevron-left&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="eael-woo-cart.default">
 				<div class="elementor-widget-container">
 			                <div class="eael-woo-cart-wrapper eael-woo-cart-empty eael-woo-style-2">
-						<?php
-	if(isset($_POST['submit'])) {
-		$produk = $_POST['produk'];
-		$nama = $_POST['nama'];
-		$alamat = $_POST['alamat'];
-		$kelurahan = $_POST['kelurahan'];
-		$kecamatan = $_POST['kecamatan'];
-		$kota = $_POST['kota'];
-		$provinsi = $_POST['provinsi'];
-		$pos = $_POST['pos'];
-		$pcs = $_POST['pcs'];
-		$harga = $_POST['harga'];
-		$total = $_POST['total'];
-	}
-?>
-
-<table border=1>
-	<tr>
-		<td>Produk</td>
-		<td>:</td>
-		<td><?php echo $produk; ?></td>
-	</tr>
-	<tr>
-		<td>Nama Pembeli</td>
-		<td>:</td>
-		<td><?php echo $nama; ?></td>
-	</tr>
-	<tr>
-		<td>Alamat</td>
-		<td>:</td>
-		<td><?php echo $kelurahan, $alamat, ', ', $kecamatan, ', ', $kota, ', ', $provinsi; ?></td>
-	</tr>
-	<tr>
-		<td>Kode Pos</td>
-		<td>:</td>
-		<td><?php echo $pos; ?></td>
-	</tr>
-	<tr>
-		<td>Total PCS</td>
-		<td>:</td>
-		<td><?php echo $pcs; ?></td>
-	</tr>
-	<tr>
-		<td>Harga Satuan</td>
-		<td>:</td>
-		<td><?php echo $harga; ?></td>
-	</tr>
-	<tr>
-		<td>Total Harga</td>
-		<td>:</td>
-		<td><?php echo $total; ?></td>
-	</tr>
-</table>
+						<h4>Pesanan Anda</h4>
+								<br>
+								<h5>Produk : <span  id="produk">Kosong</span>
+								 </h5>
+								 <h5>Nama Pembeli : <span id="nama">Kosong</span>
+								 </h5>
+								 <h5>Kelurahan : <span id="kelurahan">Kosong</span>
+								 </h5>
+								 <h5>Detail Alamat : <span id="alamat">Kosong</span>
+								 </h5>
+								 <h5>Kecamatan : <span id="kecamatan">Kosong</span>
+								 </h5>
+								 <h5>Kabupaten : <span id="kota">Kosong</span>
+								 </h5>
+								 <h5>Provinsi : <span id="provinsi">Kosong</span>
+								 </h5>
+								 <h5>Kode Pos : <span id="pos">Kosong</span>
+								 </h5>
+								 <h5>Total PCS : <span id="pcs">Kosong</span>
+								 </h5>
+								 <h5>Harga Satuan : <span id="harga">Kosong</span>
+								 </h5>
+								 <h5>Total Harga : <span id="total">Kosong</span>
+								 </h5>
+								 <button type="submit" class="btn btn-primary" onclick="whatsapp()" value="Send Enquiry">Beli Sekarang</button>
+								 <br>
 		<a class="button wc-backward wp-element-button" href="../shop/index.html">
 			Return to shop		</a>
 	</p>
@@ -826,6 +799,23 @@ var wc_single_product_params = {"i18n_required_rating_text":"Please select a rat
 				jQuery('input[name="um_request"]').val('');
 			});
 		</script>
+	<script>
+			function setData(){
+				if(typeof(localStorage) != "undefined"){
+					document.getElementById("produk").innerHTML = localStorage.produk;
+					document.getElementById("nama").innerHTML = localStorage.nama;
+					document.getElementById("kelurahan").innerHTML = localStorage.kelurahan;
+					document.getElementById("alamat").innerHTML = localStorage.alamat;
+					document.getElementById("kecamatan").innerHTML = localStorage.kecamatan;
+					document.getElementById("kota").innerHTML = localStorage.kota;
+					document.getElementById("provinsi").innerHTML = localStorage.provinsi;
+					document.getElementById("pos").innerHTML = localStorage.pos;
+					document.getElementById("pcs").innerHTML = localStorage.pcs;
+					document.getElementById("harga").innerHTML = localStorage.harga;
+					document.getElementById("total").innerHTML = localStorage.total;
+				}
+			}
+			</script>  
 		</body>
 
 <!-- Mirrored from localhost/nestone.id/keranjang/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Apr 2023 09:17:16 GMT -->
