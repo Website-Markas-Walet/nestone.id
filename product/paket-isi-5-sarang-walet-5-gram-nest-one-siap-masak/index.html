@@ -388,7 +388,7 @@ class="hfeed site" id="page">
 Add to Cart
 </button>
 <!-- Modal -->
-<form action="../../keranjang/index.php" method="POST">
+<form id="form" method="GET" action="../../keranjang/index.html">
 <div class="modal fade" id="pesan-produk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -989,6 +989,24 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 					});
 			});
 </script>
+	<script>
+	function submitForm(){
+		if(typeof(localStorage) != " "){
+			localStorage.produk = document.getElementById("produk").value;
+			localStorage.nama = document.getElementById("nama").value;
+			localStorage.alamat = document.getElementById("alamat").value;
+			localStorage.kelurahan = document.getElementById("kelurahan").value;
+			localStorage.kecamatan = document.getElementById("kecamatan").value;
+			localStorage.kota = document.getElementById("kota").value;
+			localStorage.provinsi = document.getElementById("provinsi").value;
+			localStorage.pos = document.getElementById("pos").value;
+			localStorage.pcs = document.getElementById("pcs").value;
+			localStorage.harga = document.getElementById("harga").value;
+			localStorage.total = document.getElementById("total").value;
+		}
+		document.getElementById("form").submit();
+	}
+	</script>
 		</body>
 
 <!-- Mirrored from localhost/nestone.id/product/paket-isi-5-sarang-walet-5-gram-nest-one-siap-masak/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Apr 2023 09:18:11 GMT -->
