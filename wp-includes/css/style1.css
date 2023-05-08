@@ -6,16 +6,7 @@ header .shopping{
 header .shopping img{
     width: 25px;
 }
-header .shopping span{
-    background: red;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    left: 80%;
-    padding: 3px 10px;
-}
+
 .list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
