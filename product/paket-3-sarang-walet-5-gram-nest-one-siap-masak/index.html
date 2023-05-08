@@ -208,6 +208,7 @@ flexibility(document.documentElement);
 }		</style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="../../wp-includes/css/style.css">
+	<link rel="stylesheet" href="../../wp-includes/css/style1.css">
 		</head>
 
 <body  class="product-template-default single single-product postid-1797 theme-astra woocommerce woocommerce-page woocommerce-no-js woolementor wl ehf-footer ehf-template-astra ehf-stylesheet-astra cfvsw-label-none cfvsw-product-page ast-desktop ast-plain-container ast-no-sidebar astra-4.1.2 ast-blog-single-style-1 ast-custom-post-type ast-single-post ast-mobile-inherit-site-logo ast-woocommerce-cart-menu ast-inherit-site-logo-transparent ast-hfb-header ast-normal-title-enabled elementor-default elementor-kit-948">
@@ -263,6 +264,15 @@ class="hfeed site" id="page">
 <li id="menu-item-1885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1885"><a href="../../konfirmasi-pembayaran/index.html" class="menu-link">Konfirmasi Pembayaran</a></li>
 <li id="menu-item-1879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1879"><a href="../../blog/index.html" class="menu-link">Blog</a></li>
 </ul></div></nav></div></div>		</div>
+				<div class="shopping">
+	<a class="cart-container ast-cart-desktop-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
+		<img src="../../wp-admin/images/shopping.svg">
+		<span class="quantity">0</span>		</a>
+		<div class="ast-addon-cart-wrap ast-desktop-cart-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
+			
+		</div>
+</div>
+				
 				<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-search" data-section="section-header-search">
 					<div class="ast-search-menu-icon slide-search" >
 		<form role="search" method="get" class="search-form" action="/">
@@ -278,24 +288,7 @@ class="hfeed site" id="page">
 			</div>
 		</div>
 				</div>
-					<div class="ast-builder-layout-element site-header-focus-item ast-header-woo-cart" data-section="section-header-woo-cart">
-							<div id="ast-site-header-cart" class="ast-site-header-cart ast-menu-cart-with-border  ast-menu-cart-outline">
-				<div class="ast-site-header-cart-li ">
-								<a href="../../keranjang/index.html" class="cart-container ast-cart-desktop-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
-
-						<div class="ast-addon-cart-wrap ast-desktop-cart-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
-						
-						<i class="astra-icon ast-icon-shopping-bag "
-							data-cart-total="0"
-						></i>
-				</div>			</a>
-							</div>
-				<div class="ast-site-header-cart-data">
-
 					
-				</div>
-			</div>
-						</div>
 					<div class="ast-builder-menu-2 ast-builder-menu ast-flex ast-builder-menu-2-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-2">
 			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="secondary_menu-site-navigation-desktop" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-2" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border ast-menu-hover-style-underline  stack-on-mobile"><li id="menu-item-1450" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1450"><a href="../../login/index.html" class="menu-link">Login</a></li>
 <li id="menu-item-1449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1449"><a href="../../register/index.html" class="menu-link">Register</a></li>
@@ -383,11 +376,21 @@ class="hfeed site" id="page">
 
 	<div class="summary entry-summary">
 		<h1 class="product_title entry-title">Paket 3 Sarang Walet 5 Gram Nest One Siap Masak</h1><p class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>162.000</bdi></span></p>
-
-		<br>
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pesan-produk">
-			Add to Cart
-			</button>
+	
+		<div class="list">
+	  
+	</div>
+	
+	<div class="card">
+		<h1>Keranjang Anda</h1>
+		<ul class="listCard">
+		</ul>
+		<div class="checkOut">
+			<button type="button" data-toggle="modal" data-target="#pesan-produk" class="total">0</button>
+			<div class="closeShopping">Close</div>
+		</div>
+	</div> 
+</div>
 			<!-- Modal -->
 <div class="modal fade" id="pesan-produk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 	<div class="modal-dialog" role="document">
@@ -454,14 +457,12 @@ class="hfeed site" id="page">
 	</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			<button type="submit" class="btn btn-primary" onclick="whatsapp()" value="Send Enquiry">Kirim Pesanan</button>
+			<button type="submit" class="btn btn-success" onclick="whatsapp()" value="Send Enquiry">Beli Produk</button>
 		</div>
 	</div>
 </div>
 	</div>
 
-	
-	</div>
 
 	
 	<div class="woocommerce-tabs wc-tabs-wrapper">
@@ -907,6 +908,7 @@ var ekit_config = {"ajaxurl":"http:\/\/localhost\/nestone.id\/wp-admin\/admin-aj
 <script id='wpforms-elementor-js-extra'>
 var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
 </script>
+<script src='../../wp-includes/js/produk/paket7.js'></script>
 <script src='../../wp-includes/js/form.js'></script>
 <script src='../../wp-includes/js/whatsappcart.js'></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
