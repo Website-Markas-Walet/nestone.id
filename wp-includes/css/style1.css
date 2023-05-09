@@ -33,11 +33,11 @@
 }
 .card{
     position: fixed;
-    top:0;
+    top: 70px;
     left: 100%;
-    width: 300px;
+    width: 500px;
     background-color: #040404;
-    height: 90vh;
+    height: 60vh;
     transition: 0.5s;
 }
 .active .card{
