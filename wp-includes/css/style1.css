@@ -37,7 +37,7 @@
     left: 100%;
     width: 300px;
     background-color: #040404;
-    height: 50vh;
+    height: 90vh;
     transition: 0.5s;
 }
 .active .card{
