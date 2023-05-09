@@ -1,12 +1,12 @@
 
-header .shopping{
+.shopping{
     position: relative;
     text-align: right;
 }
-header .shopping img{
+.shopping .shopping img{
     width: 25px;
 }
-header .shopping span{
+.shopping .shopping span{
     background: red;
     border-radius: 50%;
     display: flex;
