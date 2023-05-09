@@ -3,10 +3,10 @@
     position: relative;
     text-align: right;
 }
-.shopping .shopping img{
+.shopping img{
     width: 25px;
 }
-.shopping .shopping span{
+.shopping span{
     background: red;
     border-radius: 50%;
     display: flex;
