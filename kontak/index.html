@@ -184,6 +184,8 @@ flexibility(document.documentElement);
     padding-left: 1em;
     padding-top: 1em;
 }		</style>
+	<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Duru+Sans|Istok+Web">
+  <link rel="stylesheet" href="../wp-includes/css/main.css">
 		</head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="page-template page-template-elementor_header_footer page page-id-988 theme-astra woocommerce-no-js woolementor wl woocommerce ehf-footer ehf-template-astra ehf-stylesheet-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-4.1.2 ast-single-post ast-mobile-inherit-site-logo ast-woocommerce-cart-menu ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-full-width elementor-kit-948 elementor-page elementor-page-988">
@@ -239,6 +241,19 @@ class="hfeed site" id="page">
 <li id="menu-item-1885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1885"><a href="../konfirmasi-pembayaran/index.html" class="menu-link">Konfirmasi Pembayaran</a></li>
 <li id="menu-item-1879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1879"><a href="../blog/index.html" class="menu-link">Blog</a></li>
 </ul></div></nav></div></div>		</div>
+				<div class="simplecart_area">
+	<div class="simplecart_cart">
+	  <span class="showCart">
+	<span class="fa fa-shopping-cart"></span>
+	  <span class="simpleCart_quantity"></span> items
+	  <span class="dropdown fa fa-chevron-circle-down"></span>
+	  </span>
+	  <div id="cartPopover" style="display:none">
+		<div class="simpleCart_items"></div>
+	  </div>
+	</div>
+  </div>
+				
 				<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-search" data-section="section-header-search">
 					<div class="ast-search-menu-icon slide-search" >
 		<form role="search" method="get" class="search-form" action="/">
@@ -254,24 +269,6 @@ class="hfeed site" id="page">
 			</div>
 		</div>
 				</div>
-					<div class="ast-builder-layout-element site-header-focus-item ast-header-woo-cart" data-section="section-header-woo-cart">
-							<div id="ast-site-header-cart" class="ast-site-header-cart ast-menu-cart-with-border  ast-menu-cart-outline">
-				<div class="ast-site-header-cart-li ">
-								<a href="../keranjang/index.html" class="cart-container ast-cart-desktop-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
-
-						<div class="ast-addon-cart-wrap ast-desktop-cart-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
-						
-						<i class="astra-icon ast-icon-shopping-bag "
-							data-cart-total="0"
-						></i>
-				</div>			</a>
-							</div>
-				<div class="ast-site-header-cart-data">
-
-					
-				</div>
-			</div>
-						</div>
 					<div class="ast-builder-menu-2 ast-builder-menu ast-flex ast-builder-menu-2-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-2">
 			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="secondary_menu-site-navigation-desktop" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-2" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border ast-menu-hover-style-underline  stack-on-mobile"><li id="menu-item-1450" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1450"><a href="../login/index.html" class="menu-link">Login</a></li>
 <li id="menu-item-1449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1449"><a href="../register/index.html" class="menu-link">Register</a></li>
@@ -811,6 +808,11 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/nestone.id\/?wc-ajax=%%e
 <script id='wc-single-product-js-extra'>
 var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"1","zoom_options":[],"photoswipe_enabled":"1","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":"1"};
 </script>
+<script src="../wp-includes/js/jquery-1.11.3.min.js"></script>
+<script src="../wp-includes/js/simpleCart.min.js"></script>
+<script src="../wp-includes/js/handlebars.min.js"></script>
+<script src="../wp-includes/js/sheetrock.min.js"></script>
+<script src="../wp-includes/js/produk/main1.js"></script>
 <script src='../wp-content/plugins/woocommerce/assets/js/frontend/single-product.min7ef2.js?ver=7.6.0' id='wc-single-product-js'></script>
 			<script>
 			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
