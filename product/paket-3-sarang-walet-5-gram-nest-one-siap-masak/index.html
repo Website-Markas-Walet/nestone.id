@@ -208,7 +208,8 @@ flexibility(document.documentElement);
 }		</style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="../../wp-includes/css/style.css">
-	<link rel="stylesheet" href="../../wp-includes/css/style1.css">
+<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Duru+Sans|Istok+Web">
+  <link rel="stylesheet" href="../../wp-includes/css/main.css">
 		</head>
 
 <body  class="product-template-default single single-product postid-1797 theme-astra woocommerce woocommerce-page woocommerce-no-js woolementor wl ehf-footer ehf-template-astra ehf-stylesheet-astra cfvsw-label-none cfvsw-product-page ast-desktop ast-plain-container ast-no-sidebar astra-4.1.2 ast-blog-single-style-1 ast-custom-post-type ast-single-post ast-mobile-inherit-site-logo ast-woocommerce-cart-menu ast-inherit-site-logo-transparent ast-hfb-header ast-normal-title-enabled elementor-default elementor-kit-948">
@@ -264,6 +265,20 @@ class="hfeed site" id="page">
 <li id="menu-item-1885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1885"><a href="../../konfirmasi-pembayaran/index.html" class="menu-link">Konfirmasi Pembayaran</a></li>
 <li id="menu-item-1879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1879"><a href="../../blog/index.html" class="menu-link">Blog</a></li>
 </ul></div></nav></div></div>		</div>
+				<div class="simplecart_area">
+	<div class="simplecart_cart">
+	  <span class="showCart">
+	<span class="fa fa-shopping-cart"></span>
+	  <span class="simpleCart_quantity"></span> items
+	  <span class="dropdown fa fa-chevron-circle-down"></span>
+	  </span>
+	  <button data-toggle="modal" data-target="#pesan-produk">Checkout</button>
+	  <div id="cartPopover" style="display:none">
+		<div class="simpleCart_items"></div>
+	  </div>
+	</div>
+  </div>
+				
 				<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-search" data-section="section-header-search">
 					<div class="ast-search-menu-icon slide-search" >
 		<form role="search" method="get" class="search-form" action="/">
@@ -366,29 +381,14 @@ class="hfeed site" id="page">
 </div>
 
 	<div class="summary entry-summary">
-		<h1 class="product_title entry-title">Paket 3 Sarang Walet 5 Gram Nest One Siap Masak</h1><p class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>162.000</bdi></span></p>
-	<div class="shopping">
-	<a class="cart-container ast-cart-desktop-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
-		<img src="../../wp-admin/images/shopping.svg">
-		<span class="quantity">0</span>		</a>
-		<div class="ast-addon-cart-wrap ast-desktop-cart-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
-			
-		</div>
-</div>
-		
-		<div class="list">
-	  
+	<div id="products6" class="products6">
+	<script id="hr-template" type="text/x-handlebars-template">
+			<div class="simpleCart_shelfItem item">
+	<h1 class="item_name">{{cells.Name}}</h1> <p class="item_price">Rp {{cells.Price}}</p><br><br><br>
+				  <button href="javascript:;" class="item_add">Add to Cart</button>
+			  </div>
+		  </script>
 	</div>
-	
-	<div class="card">
-		<h1>Keranjang Anda</h1>
-		<ul class="listCard">
-		</ul>
-		<div class="checkOut">
-			<button type="button" data-toggle="modal" data-target="#pesan-produk" class="total">0</button>
-			<div class="closeShopping">Close</div>
-		</div>
-	</div> 
 </div>
 			<!-- Modal -->
 <div class="modal fade" id="pesan-produk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -907,10 +907,13 @@ var ekit_config = {"ajaxurl":"http:\/\/localhost\/nestone.id\/wp-admin\/admin-aj
 <script id='wpforms-elementor-js-extra'>
 var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
 </script>
-<script src='../../wp-includes/js/produk/paket7.js'></script>
 <script src='../../wp-includes/js/form.js'></script>
 <script src='../../wp-includes/js/whatsappcart.js'></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="../../wp-includes/js/jquery-1.11.3.min.js"></script>
+<script src="../../wp-includes/js/simpleCart.min.js"></script>
+<script src="../../wp-includes/js/handlebars.min.js"></script>
+<script src="../../wp-includes/js/sheetrock.min.js"></script>
+<script src="../../wp-includes/js/produk/main7.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
