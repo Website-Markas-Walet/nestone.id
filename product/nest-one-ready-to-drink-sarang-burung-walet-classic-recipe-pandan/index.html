@@ -410,49 +410,52 @@ class="hfeed site" id="page">
 			<input type="text" class="nama" id="nama" required="required" placeholder="Tulis nama anda">
 		</div>
 		<div>
-			<label for="provinsi">Provinsi</label>
-			<select class="provinsi" id="provinsi" required="required">
-				<option>Pilih</option>
-			</select>
-		</div>
-		<div>
-			<label for="kota">Kota/Kabupaten</label>
-			<select class="kota" id="kota" required="required">
-				<option>Pilih</option>
-			</select>
-		</div>
-		<div>
-			<label for="kecamatan">Kecamatan</label>
-			<select class="kecamatan" id="kecamatan" required="required">
-				<option>Pilih</option>
-			</select>
-		</div>
-		<div>
-			<label for="kelurahan">Kelurahan</label>
-			<select class="kelurahan" id="kelurahan" required="required">
-				<option>Pilih</option>
-			</select>
-		</div>
-		<div>
-			<label for="alamat">Detail Alamat (blok/jalan/RT/RW)</label>
-			<input type="text" class="alamat" id="alamat" required="required">
-		</div>
-		<div>
-			<label for="pos">Kode Pos</label>
-			<input type="number" class="pos" id="pos" required="required">
-		</div>
-		<div>
-			<label for="pcs">PCS Produk</label>
-			<input type="number" class="pcs" id="pcs" required="required" onchange="Calc(this);">
-		</div>
+		<label for="provinsi">Provinsi</label>
+		<select class="provinsi" id="provinsi" required="required">
+			<option>Pilih</option>
+		</select>
+	</div>
+	<br>
+	<div>
+		<label for="kota">Kota/Kabupaten</label>
+		<select class="kota" id="kota" required="required">
+			<option>Pilih</option>
+		</select>
+	</div>
+	<br>
+	<div>
+		<label for="kecamatan">Kecamatan</label>
+		<select class="kecamatan" id="kecamatan" required="required">
+			<option>Pilih</option>
+		</select>
+	</div>
+	<br>
+	<div>
+		<label for="kelurahan">Kelurahan</label>
+		<select class="kelurahan" id="kelurahan" required="required">
+			<option>Pilih</option>
+		</select>
+	</div>
+	<br>
+	<div>
+		<label for="alamat">Detail Alamat (blok/jalan/RT/RW)</label>
+		<input type="text" class="alamat" id="alamat" required="required">
+	</div>
+	<div>
+		<label for="pos">Kode Pos</label>
+		<input type="text" name="angka" class="pos" id="pos" required="required" onkeypress="return hanyaAngka(event)">
+	</div>
+	<br>
+	<div>
+		<label for="pcs">Total PCS Produk : </label>
+		<span class="simpleCart_quantity"  id="pcs" type="number" required="required">
+	</div>
+	<br>
 		<div>
 			<label for="harga">Harga Satuan</label>
-			<input type="number" class="harga" id="harga" required="required" readonly value="60000" onchange="Calc(this);">
+			<input type="number" class="harga" id="harga" required="required" readonly value="60000">
 		</div>
-		<div>
-			<label for="total">Total Harga</label>
-			<input type="number" class="total" id="total" required="required" readonly>
-		</div>
+		
 	</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -903,7 +906,14 @@ var ekit_config = {"ajaxurl":"http:\/\/localhost\/nestone.id\/wp-admin\/admin-aj
 <script id='wpforms-elementor-js-extra'>
 var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
 </script>
-<script src='../../wp-includes/js/form.js'></script>
+<script>
+	function hanyaAngka(event) {
+		var angka = (event.which) ? event.which : event.keyCode
+		if (angka != 46 && angka > 31 && (angka < 48 || angka > 57))
+			return false;
+		return true;
+	}
+</script>
 <script src='../../wp-includes/js/whatsappcart.js'></script>
 <script src="../../wp-includes/js/jquery-1.11.3.min.js"></script>
 <script src="../../wp-includes/js/simpleCart.min.js"></script>
