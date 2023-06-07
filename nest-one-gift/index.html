@@ -225,8 +225,11 @@ flexibility(document.documentElement);
     padding-left: 1em;
     padding-top: 1em;
 }		</style>
-	<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Duru+Sans|Istok+Web">
-  <link rel="stylesheet" href="../wp-includes/css/main.css">
+	<link rel="stylesheet" href="../wp-includes/css/main.css">
+	<link rel='stylesheet' href="../wp-includes/css/style1.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="../wp-includes/css/style.css">
+<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Duru+Sans|Istok+Web">
 		</head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="page-template page-template-elementor_header_footer page page-id-1857 theme-astra woocommerce-no-js woolementor wl woocommerce ehf-footer ehf-template-astra ehf-stylesheet-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-4.1.2 ast-single-post ast-mobile-inherit-site-logo ast-woocommerce-cart-menu ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-full-width elementor-kit-948 elementor-page elementor-page-1857">
@@ -282,18 +285,18 @@ class="hfeed site" id="page">
 <li id="menu-item-1885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1885"><a href="../konfirmasi-pembayaran/index.html" class="menu-link">Konfirmasi Pembayaran</a></li>
 <li id="menu-item-1879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1879"><a href="../blog/index.html" class="menu-link">Blog</a></li>
 </ul></div></nav></div></div>		</div>
-				<div class="simplecart_area">
-	<div class="simplecart_cart">
-	  <span class="showCart">
-	<span class="fa fa-shopping-cart"></span>
-	  <span class="simpleCart_quantity"></span> items
-	  <span class="dropdown fa fa-chevron-circle-down"></span>
-	  </span>
-	  <div id="cartPopover" style="display:none">
-		<div class="simpleCart_items"></div>
-	  </div>
-	</div>
-  </div>
+				<div class="cart-box">
+					<div class="cart-icon">
+					  <i class="fas fa-cart-arrow-down fa-2x"></i>
+					</div>
+					<div class="whole-cart-window hide">
+					  <h2>Keranjang</h2>
+					  <div class="cart-wrapper">
+					</div>
+					  <div class="subtotal">Subtotal: $0.00</div>
+					  <div class="checkout" data-toggle="modal" data-target="#pesan-produk">Checkout</div>
+					</div>
+				  </div>
 				
 				<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-search" data-section="section-header-search">
 					<div class="ast-search-menu-icon slide-search" >
@@ -410,16 +413,19 @@ class="hfeed site" id="page">
                 <div class="product-image-wrap">
                     <div class="image-wrap">
                         <a href="../product/sarang-walet-mangkok-nest-one-for-gift-50-gram/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="1024" height="1024" src="../wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1.webp" class="attachment-full size-full" alt="" decoding="async" loading="eager" srcset="/wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1.webp 1024w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-300x300.webp 300w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-150x150.webp 150w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-768x768.webp 768w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-400x400.webp 400w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-600x600.webp 600w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-100x100.webp 100w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>                    </div>
-                    <div class="image-hover-wrap">
-                        <ul class="icons-wrap over-box-style">
-                            <li class="add-to-cart"><a href="indexc042.html?add-to-cart=1777" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1777" data-product_sku="" aria-label="Add &ldquo;Sarang Walet Mangkok Nest One For Gift 50 Gram&rdquo; to your cart" rel="nofollow">Add to cart</a>                            </li>
-                            	                                                                            </ul>
-                    </div>
+                    <div data-id="10" class="cart-item">
+							<div class="details">
+								
+							  <h6>Sarang Walet Mangkok Nest One For Gift 50 Gram</h6>
+							  <p>
+								<span></span>
+								<span class="price">Rp1600000</span><br>
+								<span class="add-to-cart-btn">Add to Cart</span>
+							  </p>
+							</div>
+						  </div>
                 </div>
-                <div class="product-details-wrap">
-                    <div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>1.600.000</bdi></span></div>                    <div class="eael-product-title">
-                        <a href="../product/sarang-walet-mangkok-nest-one-for-gift-50-gram/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Sarang Walet Mangkok Nest One For Gift 50 Gram</h2></a>                    </div>
-                </div>
+               
             </div>
         </li>
                 <li class="product post-1771 type-product status-publish has-post-thumbnail product_cat-nest-one-gift product_cat-semua-kategori ast-article-single desktop-align-left tablet-align-left mobile-align-left  instock shipping-taxable purchasable product-type-simple">
@@ -427,16 +433,19 @@ class="hfeed site" id="page">
                 <div class="product-image-wrap">
                     <div class="image-wrap">
                         <a href="../product/hampers-nest-one-spesial-hari-raya/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="756" height="756" src="../wp-content/uploads/2023/04/Hampers-Nest-One-Spesial-Hari-Raya-1.webp" class="attachment-full size-full" alt="" decoding="async" loading="eager" srcset="/wp-content/uploads/2023/04/Hampers-Nest-One-Spesial-Hari-Raya-1.webp 756w, /wp-content/uploads/2023/04/Hampers-Nest-One-Spesial-Hari-Raya-1-300x300.webp 300w, /wp-content/uploads/2023/04/Hampers-Nest-One-Spesial-Hari-Raya-1-150x150.webp 150w, /wp-content/uploads/2023/04/Hampers-Nest-One-Spesial-Hari-Raya-1-400x400.webp 400w, /wp-content/uploads/2023/04/Hampers-Nest-One-Spesial-Hari-Raya-1-600x600.webp 600w, /wp-content/uploads/2023/04/Hampers-Nest-One-Spesial-Hari-Raya-1-100x100.webp 100w" sizes="(max-width: 756px) 100vw, 756px" /></a>                    </div>
-                    <div class="image-hover-wrap">
-                        <ul class="icons-wrap over-box-style">
-                            <li class="add-to-cart"><a href="index8a1d.html?add-to-cart=1771" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1771" data-product_sku="" aria-label="Add &ldquo;Hampers Nest One Spesial Hari Raya&rdquo; to your cart" rel="nofollow">Add to cart</a>                            </li>
-                            	                                                                            </ul>
-                    </div>
+                    <div data-id="1" class="cart-item">
+							<div class="details">
+								
+							  <h6>Hampers Nest One Spesial Hari Raya</h6>
+							  <p>
+								<span></span>
+								<span class="price">Rp200000</span><br>
+								<span class="add-to-cart-btn">Add to Cart</span>
+							  </p>
+							</div>
+						  </div>
                 </div>
-                <div class="product-details-wrap">
-                    <div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>200.000</bdi></span></div>                    <div class="eael-product-title">
-                        <a href="../product/hampers-nest-one-spesial-hari-raya/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Hampers Nest One Spesial Hari Raya</h2></a>                    </div>
-                </div>
+                
             </div>
         </li>
         </ul><nav id='bce68f4-eael-pagination' class='eael-woo-pagination' data-plimit='8' data-totalpage ='2' data-widgetid='bce68f4' data-pageid='1857' data-args='post_type=product&post_status%5B0%5D=publish&posts_per_page=8&order=desc&offset=0&tax_query%5B0%5D%5Btaxonomy%5D=product_cat&tax_query%5B0%5D%5Bfield%5D=slug&tax_query%5B0%5D%5Bterms%5D%5B0%5D=nest-one-gift&tax_query%5B0%5D%5Boperator%5D=IN&orderby=date&meta_query%5Brelation%5D=AND&max_page=1&total_post=2'  data-template='{"dir":"free","file_name":"default","name":"eicon-woocommerce"}'><ul class='page-numbers'><li><a href='javascript:void(0);' id='post' class='page-numbers current' data-pnumber='1'>1</a></li></ul></nav>            </div>
@@ -501,12 +510,18 @@ class="hfeed site" id="page">
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="../product/paket-isi-5-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Paket Isi 5 Sarang Walet 5 Gram Nest One Siap Masak</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>262.500</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="indexa44e.html?add-to-cart=1798" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1798" data-product_sku="" aria-label="Add &ldquo;Paket Isi 5 Sarang Walet 5 Gram Nest One Siap Masak&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                                    <div data-id="8" class="cart-item">
+													<div class="details">
+														
+													  <span>Paket Isi 5 Sarang Walet 5 Gram Nest One Siap Masak</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp262500</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                  
                 </div>
             </div>
         </li>
@@ -518,12 +533,18 @@ class="hfeed site" id="page">
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="../product/paket-3-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Paket 3 Sarang Walet 5 Gram Nest One Siap Masak</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>162.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index6a24.html?add-to-cart=1797" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1797" data-product_sku="" aria-label="Add &ldquo;Paket 3 Sarang Walet 5 Gram Nest One Siap Masak&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                       <div data-id="6" class="cart-item">
+													<div class="details">
+														
+													  <span>Paket Isi 3 Sarang Walet 5 Gram Nest One Siap Masak</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp162000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                   
                 </div>
             </div>
         </li>
@@ -535,12 +556,18 @@ class="hfeed site" id="page">
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="../product/paket-isi-2-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>112.500</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index5c09.html?add-to-cart=1793" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1793" data-product_sku="" aria-label="Add &ldquo;Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                     <div data-id="7" class="cart-item">
+													<div class="details">
+														
+													  <span>Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp112500</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                   
                 </div>
             </div>
         </li>
@@ -607,12 +634,18 @@ class="hfeed site" id="page">
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="../product/nest-one-ready-to-drink-sarang-burung-walet-classic-recipe-pandan/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Nest One Ready-to-Drink Sarang Burung Walet - Classic Recipe (Pandan)</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>60.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index835e.html?add-to-cart=1770" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1770" data-product_sku="" aria-label="Add &ldquo;Nest One Ready-to-Drink Sarang Burung Walet - Classic Recipe (Pandan)&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                               <div data-id="2" class="cart-item">
+													<div class="details">
+														
+													  <span>Nest One Ready-to-Drink Sarang Burung Walet - Classic Recipe (Pandan)</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp60000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                  
                 </div>
             </div>
         </li>
@@ -624,12 +657,18 @@ class="hfeed site" id="page">
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="../product/nest-one-ready-to-drink-sarang-burung-walet-paradise-garden-melati-osmanthus/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Nest One Ready-to-Drink Sarang Burung Walet - Paradise Garden (Melati + Osmanthus)</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>65.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="indexbfb7.html?add-to-cart=1762" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1762" data-product_sku="" aria-label="Add &ldquo;Nest One Ready-to-Drink Sarang Burung Walet - Paradise Garden (Melati + Osmanthus)&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                            <div data-id="3" class="cart-item">
+													<div class="details">
+														
+													  <span>Nest One Ready-to-Drink Sarang Burung Walet - Paradise Garden (Melati + Osmanthus)</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp65000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                  
                 </div>
             </div>
         </li>
@@ -641,12 +680,18 @@ class="hfeed site" id="page">
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="../product/nest-one-ready-to-drink-sarang-burung-walet-tropical-plump-peach-lemon/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>70.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index65f3.html?add-to-cart=1769" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1769" data-product_sku="" aria-label="Add &ldquo;Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                 <div data-id="4" class="cart-item">
+													<div class="details">
+														
+													  <span>Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp70000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                   
                 </div>
             </div>
         </li>
@@ -713,12 +758,18 @@ class="hfeed site" id="page">
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="../product/sarang-walet-mangkok-nest-one-for-gift-50-gram/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Sarang Walet Mangkok Nest One For Gift 50 Gram</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>1.600.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="indexc042.html?add-to-cart=1777" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1777" data-product_sku="" aria-label="Add &ldquo;Sarang Walet Mangkok Nest One For Gift 50 Gram&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                    <div data-id="10" class="cart-item">
+													<div class="details">
+														
+													  <span>Sarang Walet Mangkok Nest One For Gift 50 Gram</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp1600000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                   
                 </div>
             </div>
         </li>
@@ -730,12 +781,18 @@ class="hfeed site" id="page">
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="../product/nest-one-ready-to-drink-sarang-burung-walet-tropical-plump-peach-lemon/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>70.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index65f3.html?add-to-cart=1769" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1769" data-product_sku="" aria-label="Add &ldquo;Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                         <div data-id="4" class="cart-item">
+													<div class="details">
+														
+													  <span>Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp70000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                   
                 </div>
             </div>
         </li>
@@ -747,12 +804,18 @@ class="hfeed site" id="page">
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="../product/paket-isi-2-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>112.500</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index5c09.html?add-to-cart=1793" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1793" data-product_sku="" aria-label="Add &ldquo;Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                 <div data-id="7" class="cart-item">
+													<div class="details">
+														
+													  <span>Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp112500</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                 
                 </div>
             </div>
         </li>
@@ -805,6 +868,70 @@ class="hfeed site" id="page">
 							</div>
 			</div> <!-- ast-container -->
 	</div><!-- #content -->
+	<!-- Modal -->
+<div class="modal fade" id="pesan-produk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLongTitle">Checkout</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<div class="checkout-item">
+			</div>
+		<div>
+			<label for="nama">Nama Lengkap</label>
+			<input type="text" class="nama" id="namalengkap" required="required" placeholder="Tulis nama anda">
+		</div>
+		<div>
+			<label for="provinsi">Provinsi</label>
+			<select class="provinsi" id="provinsi" required="required">
+				<option>Pilih</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<label for="kota">Kota/Kabupaten</label>
+			<select class="kota" id="kota" required="required">
+				<option>Pilih</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<label for="kecamatan">Kecamatan</label>
+			<select class="kecamatan" id="kecamatan" required="required">
+				<option>Pilih</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<label for="kelurahan">Kelurahan</label>
+			<select class="kelurahan" id="kelurahan" required="required">
+				<option>Pilih</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<label for="alamat">Detail Alamat (blok/jalan/RT/RW)</label>
+			<input type="text" class="alamat" id="alamat" required="required">
+		</div>
+		<div>
+			<label for="pos">Kode Pos</label>
+			<input type="text" name="angka" class="pos" id="pos" required="required" onkeypress="return hanyaAngka(event)">
+		</div>
+	
+	
+	</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="submit" class="btn btn-success" onclick="checkoutViaWhatsApp()" value="Send Enquiry">Beli Produk</button>
+		</div>
+	</div>
+	</div>
+	</div>
+	
 			<div class="astra-mobile-cart-overlay"></div>
 			<div id="astra-mobile-cart-drawer" class="astra-cart-drawer">
 				<div class="astra-cart-drawer-header">
@@ -1153,11 +1280,21 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/nestone.id\/?wc-ajax=%%e
 <script id='wc-single-product-js-extra'>
 var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"1","zoom_options":[],"photoswipe_enabled":"1","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":"1"};
 </script>
-<script src="../wp-includes/js/jquery-1.11.3.min.js"></script>
+	<script>
+	function hanyaAngka(event) {
+		var angka = (event.which) ? event.which : event.keyCode
+		if (angka != 46 && angka > 31 && (angka < 48 || angka > 57))
+			return false;
+		return true;
+	}
+</script>
 <script src="../wp-includes/js/simpleCart.min.js"></script>
 <script src="../wp-includes/js/handlebars.min.js"></script>
 <script src="../wp-includes/js/sheetrock.min.js"></script>
-<script src="../wp-includes/js/produk/main1.js"></script>
+<script src="../wp-includes/js/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 <script src='../wp-content/plugins/woocommerce/assets/js/frontend/single-product.min7ef2.js?ver=7.6.0' id='wc-single-product-js'></script>
 			<script>
 			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
@@ -1167,6 +1304,72 @@ var wc_single_product_params = {"i18n_required_rating_text":"Please select a rat
 				jQuery('input[name="um_request"]').val('');
 			});
 		</script>
+	<!-- Autofill Provinsi, Kabupaten/Kota, Kecamatan, Kelurahan -->
+<script>
+	fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/provinces.json`)
+		.then((response) => response.json())
+		.then((provinces) => {
+			var data = provinces;
+			var tampung = `<option>Pilih</option>`;
+			data.forEach((element) => {
+				tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+			});
+			document.getElementById("provinsi").innerHTML = tampung;
+		});
+</script>
+<script>
+	const selectProvinsi = document.getElementById('provinsi');
+	const selectKota = document.getElementById('kota');
+	const selectKecamatan = document.getElementById('kecamatan');
+	const selectKelurahan = document.getElementById('kelurahan');
+
+	selectProvinsi.addEventListener('change', (e) => {
+		var provinsi = e.target.options[e.target.selectedIndex].dataset.prov;
+		fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/regencies/${provinsi}.json`)
+			.then((response) => response.json())
+			.then((regencies) => {
+				var data = regencies;
+				var tampung = `<option>Pilih</option>`;
+				document.getElementById('kota').innerHTML = '<option>Pilih</option>';
+				document.getElementById('kecamatan').innerHTML = '<option>Pilih</option>';
+				document.getElementById('kelurahan').innerHTML = '<option>Pilih</option>';
+				data.forEach((element) => {
+					tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+				});
+				document.getElementById("kota").innerHTML = tampung;
+			});
+	});
+
+	selectKota.addEventListener('change', (e) => {
+		var kota = e.target.options[e.target.selectedIndex].dataset.prov;
+		fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/districts/${kota}.json`)
+			.then((response) => response.json())
+			.then((districts) => {
+				var data = districts;
+				var tampung = `<option>Pilih</option>`;
+				document.getElementById('kecamatan').innerHTML = '<option>Pilih</option>';
+				document.getElementById('kelurahan').innerHTML = '<option>Pilih</option>';
+				data.forEach((element) => {
+					tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+				});
+				document.getElementById("kecamatan").innerHTML = tampung;
+			});
+	});
+	selectKecamatan.addEventListener('change', (e) => {
+		var kecamatan = e.target.options[e.target.selectedIndex].dataset.prov;
+		fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/villages/${kecamatan}.json`)
+			.then((response) => response.json())
+			.then((villages) => {
+				var data = villages;
+				var tampung = `<option>Pilih</option>`;
+				document.getElementById('kelurahan').innerHTML = '<option>Pilih</option>';
+				data.forEach((element) => {
+					tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+				});
+				document.getElementById("kelurahan").innerHTML = tampung;
+			});
+	});
+</script>
 		</body>
 
 <!-- Mirrored from localhost/nestone.id/nest-one-gift/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Apr 2023 09:09:12 GMT -->
