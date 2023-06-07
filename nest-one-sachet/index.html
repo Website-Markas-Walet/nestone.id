@@ -1322,6 +1322,15 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/nestone.id\/?wc-ajax=%%e
 <script id='wc-single-product-js-extra'>
 var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"1","zoom_options":[],"photoswipe_enabled":"1","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":"1"};
 </script>
+
+	<script>
+	function hanyaAngka(event) {
+		var angka = (event.which) ? event.which : event.keyCode
+		if (angka != 46 && angka > 31 && (angka < 48 || angka > 57))
+			return false;
+		return true;
+	}
+</script>
 <script src="../wp-includes/js/simpleCart.min.js"></script>
 <script src="../wp-includes/js/handlebars.min.js"></script>
 <script src="../wp-includes/js/sheetrock.min.js"></script>
