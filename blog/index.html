@@ -184,6 +184,11 @@ flexibility(document.documentElement);
     padding-left: 1em;
     padding-top: 1em;
 }		</style>
+	 <link rel="stylesheet" href="../wp-includes/css/main.css">
+	<link rel='stylesheet' href="../wp-includes/css/style1.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="../wp-includes/css/style.css">
+<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Duru+Sans|Istok+Web">
 		</head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="page-template page-template-elementor_header_footer page page-id-1873 theme-astra woocommerce-no-js woolementor wl woocommerce ehf-footer ehf-template-astra ehf-stylesheet-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-4.1.2 ast-single-post ast-mobile-inherit-site-logo ast-woocommerce-cart-menu ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-full-width elementor-kit-948 elementor-page elementor-page-1873">
@@ -239,6 +244,20 @@ class="hfeed site" id="page">
 <li id="menu-item-1885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1885"><a href="../konfirmasi-pembayaran/index.html" class="menu-link">Konfirmasi Pembayaran</a></li>
 <li id="menu-item-1879" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1873 current_page_item menu-item-1879"><a href="index.html" aria-current="page" class="menu-link">Blog</a></li>
 </ul></div></nav></div></div>		</div>
+				
+				<div class="cart-box">
+					<div class="cart-icon">
+					  <i class="fas fa-cart-arrow-down fa-2x"></i>
+					</div>
+					<div class="whole-cart-window hide">
+					  <h2>Keranjang</h2>
+					  <div class="cart-wrapper">
+					</div>
+					  <div class="subtotal">Subtotal: $0.00</div>
+					  <div class="checkout" data-toggle="modal" data-target="#pesan-produk">Checkout</div>
+					</div>
+				  </div>
+				
 				<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-search" data-section="section-header-search">
 					<div class="ast-search-menu-icon slide-search" >
 		<form role="search" method="get" class="search-form" action="/">
@@ -254,24 +273,7 @@ class="hfeed site" id="page">
 			</div>
 		</div>
 				</div>
-					<div class="ast-builder-layout-element site-header-focus-item ast-header-woo-cart" data-section="section-header-woo-cart">
-							<div id="ast-site-header-cart" class="ast-site-header-cart ast-menu-cart-with-border  ast-menu-cart-outline">
-				<div class="ast-site-header-cart-li ">
-								<a href="../keranjang/index.html" class="cart-container ast-cart-desktop-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
-
-						<div class="ast-addon-cart-wrap ast-desktop-cart-position-left ast-cart-mobile-position- ast-cart-tablet-position- ">
-						
-						<i class="astra-icon ast-icon-shopping-bag "
-							data-cart-total="0"
-						></i>
-				</div>			</a>
-							</div>
-				<div class="ast-site-header-cart-data">
-
-					
-				</div>
-			</div>
-						</div>
+				
 					<div class="ast-builder-menu-2 ast-builder-menu ast-flex ast-builder-menu-2-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-2">
 			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="secondary_menu-site-navigation-desktop" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-2" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border ast-menu-hover-style-underline  stack-on-mobile"><li id="menu-item-1450" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1450"><a href="../login/index.html" class="menu-link">Login</a></li>
 <li id="menu-item-1449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1449"><a href="../register/index.html" class="menu-link">Register</a></li>
@@ -369,6 +371,70 @@ class="hfeed site" id="page">
 							</div>
 			</div> <!-- ast-container -->
 	</div><!-- #content -->
+	<!-- Modal -->
+<div class="modal fade" id="pesan-produk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLongTitle">Checkout</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<div class="checkout-item">
+			</div>
+		<div>
+			<label for="nama">Nama Lengkap</label>
+			<input type="text" class="nama" id="namalengkap" required="required" placeholder="Tulis nama anda">
+		</div>
+		<div>
+			<label for="provinsi">Provinsi</label>
+			<select class="provinsi" id="provinsi" required="required">
+				<option>Pilih</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<label for="kota">Kota/Kabupaten</label>
+			<select class="kota" id="kota" required="required">
+				<option>Pilih</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<label for="kecamatan">Kecamatan</label>
+			<select class="kecamatan" id="kecamatan" required="required">
+				<option>Pilih</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<label for="kelurahan">Kelurahan</label>
+			<select class="kelurahan" id="kelurahan" required="required">
+				<option>Pilih</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<label for="alamat">Detail Alamat (blok/jalan/RT/RW)</label>
+			<input type="text" class="alamat" id="alamat" required="required">
+		</div>
+		<div>
+			<label for="pos">Kode Pos</label>
+			<input type="text" name="angka" class="pos" id="pos" required="required" onkeypress="return hanyaAngka(event)">
+		</div>
+	
+	
+	</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="submit" class="btn btn-success" onclick="checkoutViaWhatsApp()" value="Send Enquiry">Beli Produk</button>
+		</div>
+	</div>
+	</div>
+	</div>
+	
 			<div class="astra-mobile-cart-overlay"></div>
 			<div id="astra-mobile-cart-drawer" class="astra-cart-drawer">
 				<div class="astra-cart-drawer-header">
@@ -716,6 +782,22 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/nestone.id\/?wc-ajax=%%e
 <script id='wc-single-product-js-extra'>
 var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"1","zoom_options":[],"photoswipe_enabled":"1","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":"1"};
 </script>
+	<script>
+	function hanyaAngka(event) {
+		var angka = (event.which) ? event.which : event.keyCode
+		if (angka != 46 && angka > 31 && (angka < 48 || angka > 57))
+			return false;
+		return true;
+	}
+</script>
+<script src="../wp-includes/js/script.js"></script>
+<script src="../wp-includes/js/simpleCart.min.js"></script>
+<script src="../wp-includes/js/handlebars.min.js"></script>
+<script src="../wp-includes/js/sheetrock.min.js"></script>
+<script src="../wp-includes/js/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 <script src='../wp-content/plugins/woocommerce/assets/js/frontend/single-product.min7ef2.js?ver=7.6.0' id='wc-single-product-js'></script>
 			<script>
 			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
@@ -725,6 +807,72 @@ var wc_single_product_params = {"i18n_required_rating_text":"Please select a rat
 				jQuery('input[name="um_request"]').val('');
 			});
 		</script>
+	<!-- Autofill Provinsi, Kabupaten/Kota, Kecamatan, Kelurahan -->
+<script>
+	fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/provinces.json`)
+		.then((response) => response.json())
+		.then((provinces) => {
+			var data = provinces;
+			var tampung = `<option>Pilih</option>`;
+			data.forEach((element) => {
+				tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+			});
+			document.getElementById("provinsi").innerHTML = tampung;
+		});
+</script>
+<script>
+	const selectProvinsi = document.getElementById('provinsi');
+	const selectKota = document.getElementById('kota');
+	const selectKecamatan = document.getElementById('kecamatan');
+	const selectKelurahan = document.getElementById('kelurahan');
+
+	selectProvinsi.addEventListener('change', (e) => {
+		var provinsi = e.target.options[e.target.selectedIndex].dataset.prov;
+		fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/regencies/${provinsi}.json`)
+			.then((response) => response.json())
+			.then((regencies) => {
+				var data = regencies;
+				var tampung = `<option>Pilih</option>`;
+				document.getElementById('kota').innerHTML = '<option>Pilih</option>';
+				document.getElementById('kecamatan').innerHTML = '<option>Pilih</option>';
+				document.getElementById('kelurahan').innerHTML = '<option>Pilih</option>';
+				data.forEach((element) => {
+					tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+				});
+				document.getElementById("kota").innerHTML = tampung;
+			});
+	});
+
+	selectKota.addEventListener('change', (e) => {
+		var kota = e.target.options[e.target.selectedIndex].dataset.prov;
+		fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/districts/${kota}.json`)
+			.then((response) => response.json())
+			.then((districts) => {
+				var data = districts;
+				var tampung = `<option>Pilih</option>`;
+				document.getElementById('kecamatan').innerHTML = '<option>Pilih</option>';
+				document.getElementById('kelurahan').innerHTML = '<option>Pilih</option>';
+				data.forEach((element) => {
+					tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+				});
+				document.getElementById("kecamatan").innerHTML = tampung;
+			});
+	});
+	selectKecamatan.addEventListener('change', (e) => {
+		var kecamatan = e.target.options[e.target.selectedIndex].dataset.prov;
+		fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/villages/${kecamatan}.json`)
+			.then((response) => response.json())
+			.then((villages) => {
+				var data = villages;
+				var tampung = `<option>Pilih</option>`;
+				document.getElementById('kelurahan').innerHTML = '<option>Pilih</option>';
+				data.forEach((element) => {
+					tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+				});
+				document.getElementById("kelurahan").innerHTML = tampung;
+			});
+	});
+</script>
 		</body>
 
 <!-- Mirrored from localhost/nestone.id/blog/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Apr 2023 09:16:45 GMT -->
