@@ -17,10 +17,13 @@ body{
 
 
 .cart-box{
-    width: 5% !important;
+    width:25% !important;
     size: 5px;
-    position: relative;
+    position: absolute;
+    left:72%;
+    top:15%;
     /* border:solid 1px blue; */
+    padding:10px 20px;
 }
 
 
