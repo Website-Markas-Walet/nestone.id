@@ -19,9 +19,7 @@ body{
 .cart-box{
     width:25% !important;
     size: 5px;
-    position: absolute;
-    left:72%;
-    top:15%;
+    position: relative;
     /* border:solid 1px blue; */
     padding:10px 20px;
 }
