@@ -219,8 +219,11 @@ flexibility(document.documentElement);
     padding-left: 1em;
     padding-top: 1em;
 }		</style>
-	<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Duru+Sans|Istok+Web">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="wp-includes/css/style.css">
+<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Duru+Sans|Istok+Web">
   <link rel="stylesheet" href="wp-includes/css/main.css">
+  <link rel='stylesheet' href="wp-includes/css/style1.css">
 		</head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="home page-template-default page page-id-340 theme-astra woocommerce-no-js woolementor wl woocommerce ehf-footer ehf-template-astra ehf-stylesheet-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-4.1.2 ast-single-post ast-mobile-inherit-site-logo ast-woocommerce-cart-menu ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-kit-948 elementor-page elementor-page-340">
@@ -276,18 +279,18 @@ class="hfeed site" id="page">
 <li id="menu-item-1885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1885"><a href="konfirmasi-pembayaran/index.html" class="menu-link">Konfirmasi Pembayaran</a></li>
 <li id="menu-item-1879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1879"><a href="blog/index.html" class="menu-link">Blog</a></li>
 </ul></div></nav></div></div>		</div>
-				<div class="simplecart_area">
-	<div class="simplecart_cart">
-	  <span class="showCart">
-	<span class="fa fa-shopping-cart"></span>
-	  <span class="simpleCart_quantity"></span> items
-	  <span class="dropdown fa fa-chevron-circle-down"></span>
-	  </span>
-	  <div id="cartPopover" style="display:none">
-		<div class="simpleCart_items"></div>
-	  </div>
-	</div>
-  </div>
+				<div class="cart-box">
+					<div class="cart-icon">
+					  <i class="fas fa-cart-arrow-down fa-2x"></i>
+					</div>
+					<div class="whole-cart-window hide">
+					  <h2>Keranjang</h2>
+					  <div class="cart-wrapper">
+					</div>
+					  <div class="subtotal">Subtotal: $0.00</div>
+					  <div class="checkout" data-toggle="modal" data-target="#pesan-produk">Checkout</div>
+					</div>
+				  </div>
 				
 				<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-search" data-section="section-header-search">
 					<div class="ast-search-menu-icon slide-search" >
@@ -789,18 +792,18 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
 		</div>
 							</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-e1e9ba7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e1e9ba7" data-element_type="section">
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b931035 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b931035" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3bc10768" data-id="3bc10768" data-element_type="column">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e8bd658" data-id="e8bd658" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-2792501 elementor-widget elementor-widget-heading" data-id="2792501" data-element_type="widget" data-widget_type="heading.default">
+								<div class="elementor-element elementor-element-166b1741 elementor-widget elementor-widget-heading" data-id="166b1741" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">Produk Terbaru</h2>		</div>
 				</div>
-				<div class="elementor-element elementor-element-19d1bbe8 eael-product-list-column-1 elementor-widget elementor-widget-eicon-woocommerce" data-id="19d1bbe8" data-element_type="widget" data-widget_type="eicon-woocommerce.default">
+				<div class="elementor-element elementor-element-1808acc7 eael-product-list-column-1 elementor-widget elementor-widget-eicon-woocommerce" data-id="1808acc7" data-element_type="widget" data-widget_type="eicon-woocommerce.default">
 				<div class="elementor-widget-container">
 			
-        <div class="eael-product-grid  list" id="eael-product-grid" data-widget-id="19d1bbe8" data-page-id="340" data-nonce="804a1bf4b3" >
+        <div class="eael-product-grid  list" id="eael-product-grid" data-widget-id="1808acc7" data-page-id="342" data-nonce="804a1bf4b3" >
             <div class="woocommerce">
                 <ul class="products" data-layout-mode="list">        <li class="product eael-product-list-preset-2">
             <div class="eael-product-wrap">
@@ -810,12 +813,18 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="product/paket-isi-5-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Paket Isi 5 Sarang Walet 5 Gram Nest One Siap Masak</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>262.500</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="indexa44e.html?add-to-cart=1798" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1798" data-product_sku="" aria-label="Add &ldquo;Paket Isi 5 Sarang Walet 5 Gram Nest One Siap Masak&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+                                               <div data-id="8" class="cart-item">
+													<div class="details">
+														
+													  <span>Paket Isi 5 Sarang Walet 5 Gram Nest One Siap Masak</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp262500</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div></div>
+                   
                 </div>
             </div>
         </li>
@@ -827,12 +836,19 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="product/paket-3-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Paket 3 Sarang Walet 5 Gram Nest One Siap Masak</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>162.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index6a24.html?add-to-cart=1797" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1797" data-product_sku="" aria-label="Add &ldquo;Paket 3 Sarang Walet 5 Gram Nest One Siap Masak&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+			    <div data-id="6" class="cart-item">
+													<div class="details">
+														
+													  <span>Paket Isi 3 Sarang Walet 5 Gram Nest One Siap Masak</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp162000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div>
+                                             </div>
+                    
                 </div>
             </div>
         </li>
@@ -844,17 +860,24 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="product/paket-isi-2-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>112.500</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index5c09.html?add-to-cart=1793" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1793" data-product_sku="" aria-label="Add &ldquo;Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+			    <div data-id="7" class="cart-item">
+													<div class="details">
+														
+													  <span>Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp112500</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div>
+                                               </div>
+                    
                 </div>
             </div>
         </li>
         </ul>            <div class="eael-load-more-button-wrap">
-                <button class="eael-load-more-button" id="eael-load-more-btn-19d1bbe8" data-widget-id="19d1bbe8" data-widget="19d1bbe8" data-page-id="340" data-nonce="7abc9a500b" data-template="{&quot;dir&quot;:&quot;lite&quot;,&quot;file_name&quot;:&quot;default.php&quot;,&quot;name&quot;:&quot;Eicon-Woocommerce&quot;}" data-class="Essential_Addons_Elementor\Elements\Product_Grid" data-layout="list" data-page="1" data-args="post_type=product&amp;post_status%5B0%5D=publish&amp;posts_per_page=3&amp;order=desc&amp;offset=0&amp;tax_query%5Brelation%5D=AND&amp;tax_query%5B0%5D%5Btaxonomy%5D=product_visibility&amp;tax_query%5B0%5D%5Bfield%5D=name&amp;tax_query%5B0%5D%5Bterms%5D%5B0%5D=exclude-from-search&amp;tax_query%5B0%5D%5Bterms%5D%5B1%5D=exclude-from-catalog&amp;tax_query%5B0%5D%5Boperator%5D=NOT+IN&amp;orderby=date&amp;meta_query%5Brelation%5D=AND&amp;total_post=13" data-max-page="5">
+                <button class="eael-load-more-button" id="eael-load-more-btn-1808acc7" data-widget-id="1808acc7" data-widget="1808acc7" data-page-id="342" data-nonce="7abc9a500b" data-template="{&quot;dir&quot;:&quot;lite&quot;,&quot;file_name&quot;:&quot;default.php&quot;,&quot;name&quot;:&quot;Eicon-Woocommerce&quot;}" data-class="Essential_Addons_Elementor\Elements\Product_Grid" data-layout="list" data-page="1" data-args="post_type=product&amp;post_status%5B0%5D=publish&amp;posts_per_page=3&amp;order=desc&amp;offset=0&amp;tax_query%5Brelation%5D=AND&amp;tax_query%5B0%5D%5Btaxonomy%5D=product_visibility&amp;tax_query%5B0%5D%5Bfield%5D=name&amp;tax_query%5B0%5D%5Bterms%5D%5B0%5D=exclude-from-search&amp;tax_query%5B0%5D%5Bterms%5D%5B1%5D=exclude-from-catalog&amp;tax_query%5B0%5D%5Boperator%5D=NOT+IN&amp;orderby=date&amp;meta_query%5Brelation%5D=AND&amp;total_post=13" data-max-page="5">
                     <div class="eael-btn-loader button__loader"></div>
                     <span>Lihat Semua</span>
                 </button>
@@ -864,7 +887,7 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
 
         <script type="text/javascript">
             jQuery(document).ready(function($) {
-                var $scope = jQuery(".elementor-element-19d1bbe8");
+                var $scope = jQuery(".elementor-element-1808acc7");
                 var $products = $('.products', $scope);
                 var $layout_mode = $products.data('layout-mode');
                 
@@ -888,26 +911,25 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
         </script>
         		</div>
 				</div>
-				<div class="elementor-element elementor-element-84a71c2 elementor-widget elementor-widget-spacer" data-id="84a71c2" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-element elementor-element-7baeb64 elementor-widget elementor-widget-spacer" data-id="7baeb64" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
-			<style>/*! elementor - v3.12.1 - 02-04-2023 */
-.elementor-column .elementor-spacer-inner{height:var(--spacer-size)}.e-con{--container-widget-width:100%}.e-con-inner>.elementor-widget-spacer,.e-con>.elementor-widget-spacer{width:var(--container-widget-width,var(--spacer-size));--align-self:var(--container-widget-align-self,initial);--flex-shrink:0}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container,.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer,.e-con>.elementor-widget-spacer>.elementor-widget-container,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer{height:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner{height:var(--container-widget-height,var(--spacer-size))}</style>		<div class="elementor-spacer">
+					<div class="elementor-spacer">
 			<div class="elementor-spacer-inner"></div>
 		</div>
 				</div>
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-72fe58d8" data-id="72fe58d8" data-element_type="column">
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a23cc80" data-id="a23cc80" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-7793f71a elementor-widget elementor-widget-heading" data-id="7793f71a" data-element_type="widget" data-widget_type="heading.default">
+								<div class="elementor-element elementor-element-10039a7f elementor-widget elementor-widget-heading" data-id="10039a7f" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">Produk Terlaris</h2>		</div>
 				</div>
-				<div class="elementor-element elementor-element-76f2809 eael-product-list-column-1 elementor-widget elementor-widget-eicon-woocommerce" data-id="76f2809" data-element_type="widget" data-widget_type="eicon-woocommerce.default">
+				<div class="elementor-element elementor-element-a1b9a53 eael-product-list-column-1 elementor-widget elementor-widget-eicon-woocommerce" data-id="a1b9a53" data-element_type="widget" data-widget_type="eicon-woocommerce.default">
 				<div class="elementor-widget-container">
 			
-        <div class="eael-product-grid  list" id="eael-product-grid" data-widget-id="76f2809" data-page-id="340" data-nonce="804a1bf4b3" >
+        <div class="eael-product-grid  list" id="eael-product-grid" data-widget-id="a1b9a53" data-page-id="342" data-nonce="804a1bf4b3" >
             <div class="woocommerce">
                 <ul class="products" data-layout-mode="list">        <li class="product eael-product-list-preset-2">
             <div class="eael-product-wrap">
@@ -917,12 +939,19 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="product/nest-one-ready-to-drink-sarang-burung-walet-classic-recipe-pandan/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Nest One Ready-to-Drink Sarang Burung Walet - Classic Recipe (Pandan)</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>60.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index835e.html?add-to-cart=1770" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1770" data-product_sku="" aria-label="Add &ldquo;Nest One Ready-to-Drink Sarang Burung Walet - Classic Recipe (Pandan)&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+			    <div data-id="2" class="cart-item">
+													<div class="details">
+														
+													  <span>Nest One Ready-to-Drink Sarang Burung Walet - Classic Recipe (Pandan)</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp60000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div>
+                                             </div>
+                   
                 </div>
             </div>
         </li>
@@ -934,12 +963,19 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="product/nest-one-ready-to-drink-sarang-burung-walet-paradise-garden-melati-osmanthus/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Nest One Ready-to-Drink Sarang Burung Walet - Paradise Garden (Melati + Osmanthus)</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>65.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="indexbfb7.html?add-to-cart=1762" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1762" data-product_sku="" aria-label="Add &ldquo;Nest One Ready-to-Drink Sarang Burung Walet - Paradise Garden (Melati + Osmanthus)&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+			    <div data-id="3" class="cart-item">
+													<div class="details">
+														
+													  <span>Nest One Ready-to-Drink Sarang Burung Walet - Paradise Garden (Melati + Osmanthus)</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp65000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div>
+                                     </div>
+                  
                 </div>
             </div>
         </li>
@@ -951,17 +987,24 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="product/nest-one-ready-to-drink-sarang-burung-walet-tropical-plump-peach-lemon/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>70.000</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index65f3.html?add-to-cart=1769" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1769" data-product_sku="" aria-label="Add &ldquo;Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+			    <div data-id="4" class="cart-item">
+													<div class="details">
+														
+													  <span>Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp70000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div>
+                                          </div>
+                    
                 </div>
             </div>
         </li>
         </ul>            <div class="eael-load-more-button-wrap">
-                <button class="eael-load-more-button" id="eael-load-more-btn-76f2809" data-widget-id="76f2809" data-widget="76f2809" data-page-id="340" data-nonce="7abc9a500b" data-template="{&quot;dir&quot;:&quot;lite&quot;,&quot;file_name&quot;:&quot;default.php&quot;,&quot;name&quot;:&quot;Eicon-Woocommerce&quot;}" data-class="Essential_Addons_Elementor\Elements\Product_Grid" data-layout="list" data-page="1" data-args="post_type=product&amp;post_status%5B0%5D=publish&amp;posts_per_page=3&amp;order=asc&amp;offset=0&amp;tax_query%5Brelation%5D=AND&amp;tax_query%5B0%5D%5Btaxonomy%5D=product_visibility&amp;tax_query%5B0%5D%5Bfield%5D=name&amp;tax_query%5B0%5D%5Bterms%5D%5B0%5D=exclude-from-search&amp;tax_query%5B0%5D%5Bterms%5D%5B1%5D=exclude-from-catalog&amp;tax_query%5B0%5D%5Boperator%5D=NOT+IN&amp;orderby=meta_value_num&amp;meta_key=_price&amp;meta_query%5Brelation%5D=AND&amp;total_post=13" data-max-page="5">
+                <button class="eael-load-more-button" id="eael-load-more-btn-a1b9a53" data-widget-id="a1b9a53" data-widget="a1b9a53" data-page-id="342" data-nonce="7abc9a500b" data-template="{&quot;dir&quot;:&quot;lite&quot;,&quot;file_name&quot;:&quot;default.php&quot;,&quot;name&quot;:&quot;Eicon-Woocommerce&quot;}" data-class="Essential_Addons_Elementor\Elements\Product_Grid" data-layout="list" data-page="1" data-args="post_type=product&amp;post_status%5B0%5D=publish&amp;posts_per_page=3&amp;order=asc&amp;offset=0&amp;tax_query%5Brelation%5D=AND&amp;tax_query%5B0%5D%5Btaxonomy%5D=product_visibility&amp;tax_query%5B0%5D%5Bfield%5D=name&amp;tax_query%5B0%5D%5Bterms%5D%5B0%5D=exclude-from-search&amp;tax_query%5B0%5D%5Bterms%5D%5B1%5D=exclude-from-catalog&amp;tax_query%5B0%5D%5Boperator%5D=NOT+IN&amp;orderby=meta_value_num&amp;meta_key=_price&amp;meta_query%5Brelation%5D=AND&amp;total_post=13" data-max-page="5">
                     <div class="eael-btn-loader button__loader"></div>
                     <span>Lihat Semua</span>
                 </button>
@@ -971,7 +1014,7 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
 
         <script type="text/javascript">
             jQuery(document).ready(function($) {
-                var $scope = jQuery(".elementor-element-76f2809");
+                var $scope = jQuery(".elementor-element-a1b9a53");
                 var $products = $('.products', $scope);
                 var $layout_mode = $products.data('layout-mode');
                 
@@ -995,7 +1038,7 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
         </script>
         		</div>
 				</div>
-				<div class="elementor-element elementor-element-9ac839f elementor-widget elementor-widget-spacer" data-id="9ac839f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-element elementor-element-c809989 elementor-widget elementor-widget-spacer" data-id="c809989" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-spacer">
 			<div class="elementor-spacer-inner"></div>
@@ -1004,31 +1047,38 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3bc3f9f6" data-id="3bc3f9f6" data-element_type="column">
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-b09a109" data-id="b09a109" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-539bd910 elementor-widget elementor-widget-heading" data-id="539bd910" data-element_type="widget" data-widget_type="heading.default">
+								<div class="elementor-element elementor-element-5fd93acc elementor-widget elementor-widget-heading" data-id="5fd93acc" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">Popular</h2>		</div>
 				</div>
-				<div class="elementor-element elementor-element-232f542d eael-product-list-column-1 elementor-widget elementor-widget-eicon-woocommerce" data-id="232f542d" data-element_type="widget" data-widget_type="eicon-woocommerce.default">
+				<div class="elementor-element elementor-element-7b35485 eael-product-list-column-1 elementor-widget elementor-widget-eicon-woocommerce" data-id="7b35485" data-element_type="widget" data-widget_type="eicon-woocommerce.default">
 				<div class="elementor-widget-container">
 			
-        <div class="eael-product-grid  list" id="eael-product-grid" data-widget-id="232f542d" data-page-id="340" data-nonce="804a1bf4b3" >
+        <div class="eael-product-grid  list" id="eael-product-grid" data-widget-id="7b35485" data-page-id="342" data-nonce="804a1bf4b3" >
             <div class="woocommerce">
                 <ul class="products" data-layout-mode="list">        <li class="product eael-product-list-preset-2">
             <div class="eael-product-wrap">
                 <div class="product-image-wrap">
                     <div class="image-wrap">
-                        <a href="product/paket-isi-5-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="150" height="150" src="wp-content/uploads/2023/04/Paket-Isi-5-Sarang-Walet-5-Gram-Nest-One-Siap-Masak-150x150.webp" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="/wp-content/uploads/2023/04/Paket-Isi-5-Sarang-Walet-5-Gram-Nest-One-Siap-Masak-150x150.webp 150w, /wp-content/uploads/2023/04/Paket-Isi-5-Sarang-Walet-5-Gram-Nest-One-Siap-Masak-300x300.webp 300w, /wp-content/uploads/2023/04/Paket-Isi-5-Sarang-Walet-5-Gram-Nest-One-Siap-Masak-768x768.webp 768w, /wp-content/uploads/2023/04/Paket-Isi-5-Sarang-Walet-5-Gram-Nest-One-Siap-Masak-400x400.webp 400w, /wp-content/uploads/2023/04/Paket-Isi-5-Sarang-Walet-5-Gram-Nest-One-Siap-Masak-600x600.webp 600w, /wp-content/uploads/2023/04/Paket-Isi-5-Sarang-Walet-5-Gram-Nest-One-Siap-Masak-100x100.webp 100w, /wp-content/uploads/2023/04/Paket-Isi-5-Sarang-Walet-5-Gram-Nest-One-Siap-Masak.webp 1024w" sizes="(max-width: 150px) 100vw, 150px" /></a>                    </div>
+                        <a href="product/nest-one-ready-to-drink-sarang-burung-walet-tropical-plump-peach-lemon/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="150" height="150" src="wp-content/uploads/2023/04/Nest-One-Ready-to-Drink-Sarang-Burung-Walet-Tropical-Plump-Peach-Lemon-1-150x150.webp" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="/wp-content/uploads/2023/04/Nest-One-Ready-to-Drink-Sarang-Burung-Walet-Tropical-Plump-Peach-Lemon-1-150x150.webp 150w, /wp-content/uploads/2023/04/Nest-One-Ready-to-Drink-Sarang-Burung-Walet-Tropical-Plump-Peach-Lemon-1-300x300.webp 300w, /wp-content/uploads/2023/04/Nest-One-Ready-to-Drink-Sarang-Burung-Walet-Tropical-Plump-Peach-Lemon-1-768x768.webp 768w, /wp-content/uploads/2023/04/Nest-One-Ready-to-Drink-Sarang-Burung-Walet-Tropical-Plump-Peach-Lemon-1-400x400.webp 400w, /wp-content/uploads/2023/04/Nest-One-Ready-to-Drink-Sarang-Burung-Walet-Tropical-Plump-Peach-Lemon-1-600x600.webp 600w, /wp-content/uploads/2023/04/Nest-One-Ready-to-Drink-Sarang-Burung-Walet-Tropical-Plump-Peach-Lemon-1-100x100.webp 100w, /wp-content/uploads/2023/04/Nest-One-Ready-to-Drink-Sarang-Burung-Walet-Tropical-Plump-Peach-Lemon-1.webp 1024w" sizes="(max-width: 150px) 100vw, 150px" /></a>                    </div>
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="product/paket-isi-5-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Paket Isi 5 Sarang Walet 5 Gram Nest One Siap Masak</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>262.500</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="indexa44e.html?add-to-cart=1798" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1798" data-product_sku="" aria-label="Add &ldquo;Paket Isi 5 Sarang Walet 5 Gram Nest One Siap Masak&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+			     <div data-id="4" class="cart-item">
+													<div class="details">
+														
+													  <span>Nest One Ready-to-Drink Sarang Burung Walet - Tropical Plump (Peach + Lemon)</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp70000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div>
+                                    </div>
+                   
                 </div>
             </div>
         </li>
@@ -1036,16 +1086,23 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
             <div class="eael-product-wrap">
                 <div class="product-image-wrap">
                     <div class="image-wrap">
-                        <a href="product/sarang-walet-patahan-kecil-5-gram-premium-small-broken-nest-one/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="150" height="150" src="wp-content/uploads/2023/04/Sarang-Walet-Patahan-Kecil-5-gram-Premium-Small-Broken-Nest-One-1-150x150.webp" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="/wp-content/uploads/2023/04/Sarang-Walet-Patahan-Kecil-5-gram-Premium-Small-Broken-Nest-One-1-150x150.webp 150w, /wp-content/uploads/2023/04/Sarang-Walet-Patahan-Kecil-5-gram-Premium-Small-Broken-Nest-One-1-300x300.webp 300w, /wp-content/uploads/2023/04/Sarang-Walet-Patahan-Kecil-5-gram-Premium-Small-Broken-Nest-One-1-768x768.webp 768w, /wp-content/uploads/2023/04/Sarang-Walet-Patahan-Kecil-5-gram-Premium-Small-Broken-Nest-One-1-400x400.webp 400w, /wp-content/uploads/2023/04/Sarang-Walet-Patahan-Kecil-5-gram-Premium-Small-Broken-Nest-One-1-600x600.webp 600w, /wp-content/uploads/2023/04/Sarang-Walet-Patahan-Kecil-5-gram-Premium-Small-Broken-Nest-One-1-100x100.webp 100w, /wp-content/uploads/2023/04/Sarang-Walet-Patahan-Kecil-5-gram-Premium-Small-Broken-Nest-One-1.webp 1024w" sizes="(max-width: 150px) 100vw, 150px" /></a>                    </div>
+                        <a href="product/sarang-walet-mangkok-nest-one-for-gift-50-gram/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="150" height="150" src="wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-150x150.webp" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="/wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-150x150.webp 150w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-300x300.webp 300w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-768x768.webp 768w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-400x400.webp 400w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-600x600.webp 600w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1-100x100.webp 100w, /wp-content/uploads/2023/04/Sarang-Walet-Mangkok-Nest-One-For-Gift-50-Gram-1.webp 1024w" sizes="(max-width: 150px) 100vw, 150px" /></a>                    </div>
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="product/sarang-walet-patahan-kecil-5-gram-premium-small-broken-nest-one/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Sarang Walet Patahan Kecil 5 gram | Premium Small Broken Nest One</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>147.250</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="indexb028.html?add-to-cart=1789" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1789" data-product_sku="" aria-label="Add &ldquo;Sarang Walet Patahan Kecil 5 gram | Premium Small Broken Nest One&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+			     <div data-id="10" class="cart-item">
+													<div class="details">
+														
+													  <span>Sarang Walet Mangkok Nest One For Gift 50 Gram</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp1600000</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div>
+                                           </div>
+                  
                 </div>
             </div>
         </li>
@@ -1057,17 +1114,24 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
                 </div>
                 <div class="product-details-wrap">
                     <div class="eael-product-title">
-                                                <a href="product/paket-isi-2-sarang-walet-5-gram-nest-one-siap-masak/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><h2>Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak</h2></a>
-                                              </div><div class="eael-product-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Rp</span>112.500</bdi></span></div>
-                    <ul class="icons-wrap details-block-style">
-                                                <li class="add-to-cart"><a href="index5c09.html?add-to-cart=1793" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="1793" data-product_sku="" aria-label="Add &ldquo;Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak&rdquo; to your cart" rel="nofollow">Add to cart</a></li>
-
-	                                                                </ul>
+			        <div data-id="7" class="cart-item">
+													<div class="details">
+														
+													  <span>Paket Isi 2 Sarang Walet 5 Gram Nest One Siap Masak</span>
+													  <p>
+														<span></span>
+														<span class="price2">Rp112500</span><br>
+														<span class="add-to-cart-btn">Add To Cart</span>
+													  </p>
+													</div>
+												  </div>
+                                        </div>
+                   
                 </div>
             </div>
         </li>
         </ul>            <div class="eael-load-more-button-wrap">
-                <button class="eael-load-more-button" id="eael-load-more-btn-232f542d" data-widget-id="232f542d" data-widget="232f542d" data-page-id="340" data-nonce="7abc9a500b" data-template="{&quot;dir&quot;:&quot;lite&quot;,&quot;file_name&quot;:&quot;default.php&quot;,&quot;name&quot;:&quot;Eicon-Woocommerce&quot;}" data-class="Essential_Addons_Elementor\Elements\Product_Grid" data-layout="list" data-page="1" data-args="post_type=product&amp;post_status%5B0%5D=publish&amp;posts_per_page=3&amp;order=asc&amp;offset=0&amp;tax_query%5Brelation%5D=AND&amp;tax_query%5B0%5D%5Btaxonomy%5D=product_visibility&amp;tax_query%5B0%5D%5Bfield%5D=name&amp;tax_query%5B0%5D%5Bterms%5D%5B0%5D=exclude-from-search&amp;tax_query%5B0%5D%5Bterms%5D%5B1%5D=exclude-from-catalog&amp;tax_query%5B0%5D%5Boperator%5D=NOT+IN&amp;orderby=rand&amp;meta_query%5Brelation%5D=AND&amp;total_post=13" data-max-page="5">
+                <button class="eael-load-more-button" id="eael-load-more-btn-7b35485" data-widget-id="7b35485" data-widget="7b35485" data-page-id="342" data-nonce="7abc9a500b" data-template="{&quot;dir&quot;:&quot;lite&quot;,&quot;file_name&quot;:&quot;default.php&quot;,&quot;name&quot;:&quot;Eicon-Woocommerce&quot;}" data-class="Essential_Addons_Elementor\Elements\Product_Grid" data-layout="list" data-page="1" data-args="post_type=product&amp;post_status%5B0%5D=publish&amp;posts_per_page=3&amp;order=asc&amp;offset=0&amp;tax_query%5Brelation%5D=AND&amp;tax_query%5B0%5D%5Btaxonomy%5D=product_visibility&amp;tax_query%5B0%5D%5Bfield%5D=name&amp;tax_query%5B0%5D%5Bterms%5D%5B0%5D=exclude-from-search&amp;tax_query%5B0%5D%5Bterms%5D%5B1%5D=exclude-from-catalog&amp;tax_query%5B0%5D%5Boperator%5D=NOT+IN&amp;orderby=rand&amp;meta_query%5Brelation%5D=AND&amp;total_post=13" data-max-page="5">
                     <div class="eael-btn-loader button__loader"></div>
                     <span>Lihat Semua</span>
                 </button>
@@ -1077,7 +1141,7 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
 
         <script type="text/javascript">
             jQuery(document).ready(function($) {
-                var $scope = jQuery(".elementor-element-232f542d");
+                var $scope = jQuery(".elementor-element-7b35485");
                 var $products = $('.products', $scope);
                 var $layout_mode = $products.data('layout-mode');
                 
@@ -1101,7 +1165,7 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
         </script>
         		</div>
 				</div>
-				<div class="elementor-element elementor-element-109cafb elementor-widget elementor-widget-spacer" data-id="109cafb" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-element elementor-element-03bdc1f elementor-widget elementor-widget-spacer" data-id="03bdc1f" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-spacer">
 			<div class="elementor-spacer-inner"></div>
@@ -1113,22 +1177,7 @@ class="post-340 page type-page status-publish ast-article-single" id="post-340" 
 							</div>
 		</section>
 							</div>
-		
-	
-	
-</div><!-- .entry-content .clear -->
-
-	
-	
-</article><!-- #post-## -->
-
-			</main><!-- #main -->
-			
-		
-	</div><!-- #primary -->
-
-
-	</div> <!-- ast-container -->
+			</div> <!-- ast-container -->
 	</div><!-- #content -->
 			<div class="astra-mobile-cart-overlay"></div>
 			<div id="astra-mobile-cart-drawer" class="astra-cart-drawer">
@@ -1481,7 +1530,7 @@ var wc_single_product_params = {"i18n_required_rating_text":"Please select a rat
 <script src="wp-includes/js/simpleCart.min.js"></script>
 <script src="wp-includes/js/handlebars.min.js"></script>
 <script src="wp-includes/js/sheetrock.min.js"></script>
-<script src="wp-includes/js/produk/main1.js"></script>
+<script src="wp-includes/js/script.js"></script>
 <script src='wp-content/plugins/woocommerce/assets/js/frontend/single-product.min7ef2.js?ver=7.6.0' id='wc-single-product-js'></script>
 			<script>
 			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
