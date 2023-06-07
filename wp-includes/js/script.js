@@ -65,7 +65,7 @@ function addItemFunction(e){
     const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id")
     const name = e.target.parentElement.previousElementSibling.textContent
     let price = e.target.parentElement.children[1].textContent
-    price = price.replace("Rp.", '')
+    price = price.replace("Rp", '')
     const item = new CartItem(name, price)
     LocalCart.addItemToLocalCart(id, item)
  console.log(price)
@@ -118,7 +118,7 @@ function updateCartUI(){
                            <h4>${value.name}</h4>
                            <p>
                             <span class="quantity">Quantity: ${value.quantity}</span>
-                               <span class="price">Rp.${price}</span>
+                               <span class="price">Rp${price}</span>
                                <span class="increase-quantity" onclick="increaseQuantity('${key}')"><i class="fas fa-plus"></i></span>
                                <span class="cancel" onclick="decreaseQuantity('${key}')"><i class="fas fa-minus"></i></span>
                            </p>
@@ -135,7 +135,7 @@ function updateCartUI(){
         let root = document.querySelector(':root')
         root.style.setProperty('--after-content', `"${count}"`)
         const subtotal = document.querySelector('.subtotal')
-        subtotal.innerHTML = `Total Harga: Rp.${total}`
+        subtotal.innerHTML = `Total Harga: Rp${total}`
     }
     else
     cartIcon.classList.remove('non-empty')
@@ -184,7 +184,7 @@ function checkOut() {
                 <h4>${value.name}</h4>
                 <p>
                     <span class="quantity">Quantity: ${value.quantity}</span>
-                    <span class="price">Total Harga: Rp.${price}</span>
+                    <span class="price">Total Harga: Rp${price}</span>
 
                 </p>
             </div>
@@ -203,7 +203,7 @@ function checkOut() {
         let root = document.querySelector(':root')
         root.style.setProperty('--after-content', `"${count}"`)
         const subtotal = document.querySelector('.subtotal')
-        subtotal.innerHTML = `Total Harga: Rp.${total}`
+        subtotal.innerHTML = `Total Harga: Rp${total}`
 
         // Memanggil total data name, price, dan quantity di HTML
         const namaProdukElemen = document.getElementById('nama-produk')
@@ -217,7 +217,7 @@ function checkOut() {
 
         namaProdukElemen.textContent = namaProduk
         quantityElemen.textContent = `Quantity: ${quantity}`
-        hargaElemen.textContent = `Harga Satuan: Rp.${harga}`
+        hargaElemen.textContent = `Harga Satuan: Rp${harga}`
     } else {
         cartIcon.classList.remove('non-empty')
     }
@@ -231,7 +231,7 @@ function checkoutViaWhatsApp() {
   
     for (const [key, value] of items.entries()) {
       message += `Produk: ${value.name}\n`;
-      message += `Harga Satuan: Rp.${value.price}\n`;
+      message += `Harga Satuan: Rp${value.price}\n`;
       message += `Kuantitas: ${value.quantity}\n\n`;
     }
 
@@ -248,7 +248,7 @@ const nama = document.getElementById('namalengkap').value;
   message += `Alamat: ${alamat}, ${kelurahan}, ${kecamatan}, ${kota}, ${provinsi}, ${pos}\n\n`;
   
     const total = getTotalPrice(items);
-    message += `Total Harga: Rp.${total}\n\n`;
+    message += `Total Harga: Rp${total}\n\n`;
   
     // Ganti nomor telepon WhatsApp yang sesuai
     const phoneNumber = '6285731470538';
