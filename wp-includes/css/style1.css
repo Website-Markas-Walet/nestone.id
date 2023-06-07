@@ -65,6 +65,7 @@ body{
     width:100%;
 }
 .cart-item .details{
+    font-weight: bold;
     padding-left:2%;
 }
 
@@ -79,7 +80,12 @@ body{
  display: block;
 text-align: center; 
   }
-  
+  .cart-item .price2{
+    font-weight: bold;
+    color: #de9c02;
+display: block;
+text-align: left; 
+      }
  .quantity{
      display: block;
      margin-top:5%;
@@ -143,6 +149,7 @@ text-align: center;
     display: block;
     text-align: left; 
       }
+
 .card-item span{
     display: block;
     margin-top:10px;
