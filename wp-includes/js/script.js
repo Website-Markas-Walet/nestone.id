@@ -255,7 +255,7 @@ const nama = document.getElementById('namalengkap').value;
     message += `Total Harga: Rp${total}\n\n`;
   
     // Ganti nomor telepon WhatsApp yang sesuai
-    const phoneNumber = '6285731470538';
+    const phoneNumber = '6287725260196 ';
   
     // Buka WhatsApp dengan pesan yang sudah terisi
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`);
