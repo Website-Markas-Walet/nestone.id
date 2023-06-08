@@ -164,6 +164,45 @@ text-align: left;
     color:#fff
 }
 
+.add-to-cart-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #209cfb;
+  }
+
+  .add-to-cart-btn:active {
+    background-color: #d9efff;
+    color: black;
+  }
+
+.cart-btn{
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .cart-btn:active {
+    background-color: #209cfb;
+  }
+
+.cart-btn::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/60/60992.png); /* Ganti dengan path gambar logo keranjang */
+    background-size: cover;
+    margin-right: 2px;
+    margin-top: 5px;
+  }
+
 #checkout-form-container {
     max-width: 400px;
     margin: 0 auto;
