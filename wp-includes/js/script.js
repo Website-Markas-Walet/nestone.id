@@ -270,3 +270,26 @@ const nama = document.getElementById('namalengkap').value;
     total = Math.round(total * 100) / 100;
     return total;
   }
+
+  document.getElementById("checkout-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    validateForm();
+  });
+  
+  function validateForm() {
+    var nama = document.getElementById("namalengkap").value;
+    var provinsi = document.getElementById("provinsi").value;
+    var kota = document.getElementById("kota").value;
+    var kecamatan = document.getElementById("kecamatan").value;
+    var kelurahan = document.getElementById("kelurahan").value;
+    var alamat = document.getElementById("alamat").value;
+    var pos = document.getElementById("pos").value;
+    
+    if (nama === "" || provinsi === "Pilih" || kota === "Pilih" || kecamatan === "Pilih" || kelurahan === "Pilih" || alamat === "" || pos === "") {
+      alert("Mohon lengkapi semua data!");
+      return false;
+    }
+    else{
+    checkoutViaWhatsApp();
+    }
+  }
