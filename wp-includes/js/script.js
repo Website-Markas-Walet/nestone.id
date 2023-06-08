@@ -272,7 +272,6 @@ const nama = document.getElementById('namalengkap').value;
   }
 
   document.getElementById("checkout-form").addEventListener("submit", function(event) {
-    event.preventDefault();
     validateForm();
   });
   
