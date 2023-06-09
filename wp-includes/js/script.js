@@ -65,15 +65,26 @@ addToCartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
 
-function addItemFunction(e){
-    const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id")
-    const name = e.target.parentElement.previousElementSibling.textContent
-    let price = e.target.parentElement.children[1].textContent
-    price = price.replace("Rp", '')
-    const item = new CartItem(name, price)
-    LocalCart.addItemToLocalCart(id, item)
- console.log(price)
-}
+function addItemFunction(e) {
+    const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id");
+    const name = e.target.parentElement.previousElementSibling.textContent;
+    let price = e.target.parentElement.children[1].textContent;
+    price = price.replace("Rp.", "");
+    const item = new CartItem(name, price);
+    LocalCart.addItemToLocalCart(id, item);
+  
+    // Perbarui quantity pada tombol "Add to Cart"
+    const quantityElement = e.target.querySelector(".quantity");
+    if (quantityElement) {
+      const cartItems = LocalCart.getLocalCartItems();
+      const quantity = cartItems.get(id)?.quantity || 0;
+      quantityElement.textContent = quantity;
+    }
+  
+    console.log(price);
+  }
+
+
 
 
 cartIcon.addEventListener('mouseover', ()=>{
@@ -101,49 +112,49 @@ cartIcon.addEventListener('mouseleave', ()=>{
 })  
  
 
-function updateCartUI(){
-    const cartWrapper = document.querySelector('.cart-wrapper')
-    cartWrapper.innerHTML=""
-    const items = LocalCart.getLocalCartItems()
-    if(items === null) return
-    let count = 0
-    let total = 0
-    for(const [key, value] of items.entries()){
-        const cartItem = document.createElement('div')
-        cartItem.classList.add('cart-item')
-        let price = value.price*value.quantity
-        price = Math.round(price*100)/100
-        count+=1
-        total += price
-        total = Math.round(total*100)/100
-        cartItem.innerHTML =
-        `
-                       <div class="details">
-                           <h4>${value.name}</h4>
-                           <p>
-                            <span class="quantity">Quantity: ${value.quantity}</span>
-                               <span class="price">Rp${price}</span>
-                               <span class="increase-quantity" onclick="increaseQuantity('${key}')"><i class="fas fa-plus"></i></span>
-                               <span class="cancel" onclick="decreaseQuantity('${key}')"><i class="fas fa-minus"></i></span>
-                           </p>
-            </div>
-                       
-        `
-
-
-        cartWrapper.append(cartItem)
+function updateCartUI() {
+    const cartWrapper = document.querySelector('.cart-wrapper');
+    cartWrapper.innerHTML = '';
+    const items = LocalCart.getLocalCartItems();
+    if (items === null) return;
+    let count = 0;
+    let total = 0;
+    for (const [key, value] of items.entries()) {
+      const cartItem = document.createElement('div');
+      cartItem.classList.add('cart-item');
+      let price = value.price * value.quantity;
+      price = Math.round(price * 100) / 100;
+      count += value.quantity;
+      total += price;
+      total = Math.round(total * 100) / 100;
+      cartItem.innerHTML = `
+        <div class="details">
+          <h4>${value.name}</h4>
+          <p>
+            <span class="quantity">Quantity: ${value.quantity}</span>
+            <span class="price">Rp${price}</span>
+            <span class="increase-quantity" onclick="increaseQuantity('${key}')"><i class="fas fa-plus"></i></span>
+            <span class="cancel" onclick="decreaseQuantity('${key}')"><i class="fas fa-minus"></i></span>
+          </p>
+        </div>
+      `;
+      cartWrapper.append(cartItem);
     }
-
-    if(count > 0){
-        cartIcon.classList.add('non-empty')
-        let root = document.querySelector(':root')
-        root.style.setProperty('--after-content', `"${count}"`)
-        const subtotal = document.querySelector('.subtotal')
-        subtotal.innerHTML = `Total Harga: Rp${total}`
+  
+    if (count > 0) {
+      cartIcon.classList.add('non-empty');
+      let root = document.querySelector(':root');
+      root.style.setProperty('--after-content', `"${count}"`);
+      const subtotal = document.querySelector('.subtotal');
+      subtotal.innerHTML = `Total Harga: Rp.${total}`;
+  
+      // Menampilkan total quantity pada ikon cart
+      const cartQuantity = document.querySelector('.cart-quantity');
+      cartQuantity.textContent = count;
+    } else {
+      cartIcon.classList.remove('non-empty');
     }
-    else
-    cartIcon.classList.remove('non-empty')
-}
+  }
 
 
 function increaseQuantity(key) {
@@ -188,7 +199,7 @@ function checkOut() {
                 <h4>${value.name}</h4>
                 <p>
                     <span class="quantity">Quantity: ${value.quantity}</span>
-                    <span class="price">Total Harga: Rp${price}</span>
+                    <span class="price">Total Harga: Rp.${price}</span>
 
                 </p>
             </div>
@@ -207,7 +218,7 @@ function checkOut() {
         let root = document.querySelector(':root')
         root.style.setProperty('--after-content', `"${count}"`)
         const subtotal = document.querySelector('.subtotal')
-        subtotal.innerHTML = `Total Harga: Rp${total}`
+        subtotal.innerHTML = `Total Harga: Rp.${total}`
 
         // Memanggil total data name, price, dan quantity di HTML
         const namaProdukElemen = document.getElementById('nama-produk')
@@ -221,7 +232,7 @@ function checkOut() {
 
         namaProdukElemen.textContent = namaProduk
         quantityElemen.textContent = `Quantity: ${quantity}`
-        hargaElemen.textContent = `Harga Satuan: Rp${harga}`
+        hargaElemen.textContent = `Harga Satuan: Rp.${harga}`
     } else {
         cartIcon.classList.remove('non-empty')
     }
@@ -231,11 +242,11 @@ function checkoutViaWhatsApp() {
     const items = LocalCart.getLocalCartItems();
     if (items === null) return;
   
-    let message = 'Halo NestOne.id, saya ingin memesan produk yang anda tawarkan. Antara lain sebagai berikut:\n\n';
+    let message = 'Halo, saya ingin memesan produk berikut:\n\n';
   
     for (const [key, value] of items.entries()) {
       message += `Produk: ${value.name}\n`;
-      message += `Harga Satuan: Rp${value.price}\n`;
+      message += `Harga Satuan: Rp.${value.price}\n`;
       message += `Kuantitas: ${value.quantity}\n\n`;
     }
 
@@ -252,10 +263,10 @@ const nama = document.getElementById('namalengkap').value;
   message += `Alamat: ${alamat}, ${kelurahan}, ${kecamatan}, ${kota}, ${provinsi}, ${pos}\n\n`;
   
     const total = getTotalPrice(items);
-    message += `Total Harga: Rp${total}\n\n`;
+    message += `Total Harga: Rp.${total}\n\n`;
   
     // Ganti nomor telepon WhatsApp yang sesuai
-    const phoneNumber = '6287725260196';
+    const phoneNumber = '6285731470538';
   
     // Buka WhatsApp dengan pesan yang sudah terisi
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`);
@@ -293,3 +304,43 @@ const nama = document.getElementById('namalengkap').value;
     checkoutViaWhatsApp();
     }
   }
+
+
+  // JavaScript
+  const addToCartBtn = document.querySelector('.add-to-cart-btn');
+
+
+  addToCartBtn.addEventListener('click', () => {
+    // Membuat elemen angka yang akan melayang
+    const floatingNumber = document.createElement('span');
+    floatingNumber.classList.add('floating-number');
+    floatingNumber.textContent = '1';
+  
+    // Menambahkan animasi lalu menghapus elemen angka setelah animasi selesai
+    floatingNumber.addEventListener('animationend', () => {
+      floatingNumber.remove();
+    });
+  
+    // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
+    addToCartBtn.appendChild(floatingNumber);
+  });
+
+
+   // JavaScript
+   const cartBtn = document.querySelector('.cart-btn');
+
+
+   cartBtn.addEventListener('click', () => {
+     // Membuat elemen angka yang akan melayang
+     const floatingNumber = document.createElement('span');
+     floatingNumber.classList.add('floating-number');
+     floatingNumber.textContent = '1';
+   
+     // Menambahkan animasi lalu menghapus elemen angka setelah animasi selesai
+     floatingNumber.addEventListener('animationend', () => {
+       floatingNumber.remove();
+     });
+   
+     // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
+     cartBtn.appendChild(floatingNumber);
+   });
