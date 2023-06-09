@@ -12,7 +12,7 @@ box-sizing: border-box;
 
 body{
     width:100vw;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', 'sans-serif';
 }
 
 
@@ -65,26 +65,29 @@ body{
     width:100%;
 }
 .cart-item .details{
+    font-weight: bold;
     padding-left:2%;
 }
 
 
 .cart-item h3{
   text-align: center; 
-  margin-bottom:10%; 
+  margin-bottom:5%; 
 }
 
 
 .cart-item .price{
- display: block;
+display: block;
 text-align: center; 
   }
-  .cart-item .price2{
+  
+.cart-item .price2{
     font-weight: bold;
     color: #de9c02;
 display: block;
 text-align: left; 
       }
+  
  .quantity{
      display: block;
      margin-top:5%;
@@ -110,7 +113,9 @@ text-align: left;
  }
 .non-empty::after{
   content: var(--after-content);
-  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px;
+  font-size: 20px;
   width:25px;
   display: inline-block;
   text-align: center;
@@ -148,12 +153,12 @@ text-align: left;
     display: block;
     text-align: left; 
       }
-
 .card-item span{
     display: block;
     margin-top:10px;
 }
 .add-to-cart-btn{
+  position: relative;
     width: fit-content;
     margin-top:10px;
     padding: 10px 15px;
@@ -175,6 +180,7 @@ text-align: left;
   }
 
 .cart-btn{
+  position: relative;
     display: inline-block;
   padding: 10px 20px;
   background-color: #ffffff;
@@ -189,7 +195,15 @@ text-align: left;
   }
 
   .cart-btn:active {
-    background-color: #209cfb;
+    position: relative;
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: #6eb2ff;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  animation: bounce-animation 0.5s;
   }
 
 .cart-btn::before {
@@ -212,6 +226,7 @@ text-align: left;
   
   #checkout-form-container h2 {
     margin-bottom: 10px;
+    margin-left: 10px;
   }
   
   #checkout-form-container label {
@@ -237,3 +252,49 @@ text-align: left;
   #checkout-form-container button:hover {
     background-color: #45a049;
   }
+
+  
+  .add-to-cart-btn .floating-number {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(24, 105, 227);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    animation: floatingAnimation 1s ease-out;
+  }
+  
+  @keyframes floatingAnimation {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(0, -30px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, -60px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes bounce-animation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
