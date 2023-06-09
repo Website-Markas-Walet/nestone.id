@@ -344,3 +344,4 @@ const nama = document.getElementById('namalengkap').value;
      // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
      cartBtn.appendChild(floatingNumber);
    });
+ 
