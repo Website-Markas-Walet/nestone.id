@@ -203,7 +203,7 @@ text-align: left;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  animation: bounce-animation 0.5s;
+  animation: floatingAnimation 1s ease-out;
   }
 
 .cart-btn::before {
@@ -283,18 +283,6 @@ text-align: left;
     100% {
       transform: translate(0, -60px);
       opacity: 0;
-    }
-  }
-
-  @keyframes bounce-animation {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-50px);
-    }
-    100% {
-      transform: translateY(0);
     }
   }
 
