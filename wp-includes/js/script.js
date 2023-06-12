@@ -57,6 +57,7 @@ const cartIcon = document.querySelector('.fa-cart-arrow-down')
 const wholeCartWindow = document.querySelector('.whole-cart-window')
 wholeCartWindow.inWindow = 0
 const addToCartBtns = document.querySelectorAll('.add-to-cart-btn')
+const addToCartBtns2 = document.querySelectorAll('.add-to-cart-btn2')
 const cartBtns = document.querySelectorAll('.cart-btn')
 cartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
@@ -64,10 +65,16 @@ cartBtns.forEach( (btn)=>{
 addToCartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
+addToCartBtns2.forEach( (btn)=>{
+    btn.addEventListener('click', addItemFunction)
+}  )
 cartBtns.forEach( (btn)=>{
     btn.addEventListener('click', showCartIcon)
 }  )
 addToCartBtns.forEach( (btn)=>{
+    btn.addEventListener('click', showCartIcon)
+}  )
+addToCartBtns2.forEach( (btn)=>{
     btn.addEventListener('click', showCartIcon)
 }  )
 
@@ -322,4 +329,23 @@ const nama = document.getElementById('namalengkap').value;
    
      // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
      addToCartBtn.appendChild(floatingNumber);
+   });
+
+   // JavaScript
+   const addToCartBtn2 = document.querySelector('.add-to-cart-btn2');
+
+
+   addToCartBtn2.addEventListener('click', () => {
+     // Membuat elemen angka yang akan melayang
+     const floatingNumber = document.createElement('span');
+     floatingNumber.classList.add('floating-number');
+     floatingNumber.textContent = '1';
+   
+     // Menambahkan animasi lalu menghapus elemen angka setelah animasi selesai
+     floatingNumber.addEventListener('animationend', () => {
+       floatingNumber.remove();
+     });
+   
+     // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
+     addToCartBtn2.appendChild(floatingNumber);
    });
