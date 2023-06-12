@@ -60,16 +60,12 @@ const addToCartBtns = document.querySelectorAll('.add-to-cart-btn')
 addToCartBtns.forEach( (btn)=>{
     btn.addEventListener('click',  addItemFunction)
 }  )
-addToCartBtns.forEach( (btn)=>{
-    btn.addEventListener('click', showCartIcon)
-}  )
+
 const cartBtns = document.querySelectorAll('.cart-btn')
 cartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
-cartBtns.forEach( (btn)=>{
-    btn.addEventListener('click', showCartIcon)
-}  )
+
 
 function addItemFunction(e){
     const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id")
@@ -82,12 +78,6 @@ function addItemFunction(e){
  console.log(price)
 }
 
-
-function showCartIcon() {
-    if (wholeCartWindow.classList.contains('hide')) {
-        wholeCartWindow.classList.remove('hide')
-    }
-  }
 
 cartIcon.addEventListener('mouseover', ()=>{
 if(wholeCartWindow.classList.contains('hide'))
