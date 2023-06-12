@@ -323,24 +323,3 @@ const nama = document.getElementById('namalengkap').value;
      // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
      addToCartBtn.appendChild(floatingNumber);
    });
- 
- 
-    // JavaScript
-    const cartBtn = document.querySelector('.cart-btn');
- 
- 
-    cartBtn.addEventListener('click', () => {
-      // Membuat elemen angka yang akan melayang
-      const floatingNumber = document.createElement('span');
-      floatingNumber.classList.add('floating-number');
-      floatingNumber.textContent = '1';
-    
-      // Menambahkan animasi lalu menghapus elemen angka setelah animasi selesai
-      floatingNumber.addEventListener('animationend', () => {
-        floatingNumber.remove();
-      });
-    
-      // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
-      cartBtn.appendChild(floatingNumber);
-    });
-
