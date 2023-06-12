@@ -276,7 +276,7 @@ text-align: left;
   }
 
   
-  .add-to-cart-btn .floating-number {
+.floating-number {
     position: absolute;
     top: -10px;
     right: -10px;
