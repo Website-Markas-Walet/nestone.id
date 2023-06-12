@@ -57,11 +57,11 @@ const cartIcon = document.querySelector('.fa-cart-arrow-down')
 const wholeCartWindow = document.querySelector('.whole-cart-window')
 wholeCartWindow.inWindow = 0
 const addToCartBtns = document.querySelectorAll('.add-to-cart-btn')
-const CartBtns = document.querySelectorAll('.cart-btn')
+const cartBtns = document.querySelectorAll('.cart-btn')
 CartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
-addToCartBtns.forEach( (btn)=>{
+cartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
 
