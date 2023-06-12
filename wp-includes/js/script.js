@@ -16,7 +16,7 @@ class LocalCart{
         return new Map(Object.entries(JSON.parse(cart)))
     }
 
-     static addItemToLocalCart(id, item){
+    static addItemToLocalCart(id, item){
         let cart = LocalCart.getLocalCartItems()
         if(cart.has(id)){
             let mapItem = cart.get(id)
@@ -48,6 +48,7 @@ class LocalCart{
     else
     localStorage.setItem(LocalCart.key,  JSON.stringify(Object.fromEntries(cart)))
        updateCartUI()
+       checkOut()
     }
 }
 
@@ -56,10 +57,10 @@ const cartIcon = document.querySelector('.fa-cart-arrow-down')
 const wholeCartWindow = document.querySelector('.whole-cart-window')
 wholeCartWindow.inWindow = 0
 const addToCartBtns = document.querySelectorAll('.add-to-cart-btn')
-addToCartBtns.forEach( (btn)=>{
+const CartBtns = document.querySelectorAll('.cart-btn')
+CartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
-const cartBtns = document.querySelectorAll('.cart-btn')
 addToCartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
@@ -157,7 +158,8 @@ function increaseQuantity(key) {
     checkOut()
   }
   
-document.addEventListener('DOMContentLoaded', ()=>{updateCartUI()})
+
+document.addEventListener('DOMContentLoaded', ()=>{updateCartUI(), checkOut()})
 
 function checkOut() {
     const cartWrapper = document.querySelector('.checkout-item')
