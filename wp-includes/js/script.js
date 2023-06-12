@@ -136,7 +136,7 @@ function updateCartUI(){
         let root = document.querySelector(':root')
         root.style.setProperty('--after-content', `"${count}"`)
         const subtotal = document.querySelector('.subtotal')
-        subtotal.innerHTML = `Rp${total}`
+        subtotal.innerHTML = `Total Harga: Rp${total}`
     }
     else
     cartIcon.classList.remove('non-empty')
