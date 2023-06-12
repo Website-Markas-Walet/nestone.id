@@ -58,10 +58,10 @@ const wholeCartWindow = document.querySelector('.whole-cart-window')
 wholeCartWindow.inWindow = 0
 const addToCartBtns = document.querySelectorAll('.add-to-cart-btn')
 const cartBtns = document.querySelectorAll('.cart-btn')
-CartBtns.forEach( (btn)=>{
+cartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
-cartBtns.forEach( (btn)=>{
+addToCartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
 
