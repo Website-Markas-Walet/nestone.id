@@ -122,7 +122,7 @@ function updateCartUI(){
         <h4>${value.name}</h4>
         <p>
          <span class="quantity">Quantity: ${value.quantity}</span>
-            <span class="price">Harga Satuan: Rp.${price}</span>
+            <span class="price">Rp${price}</span>
             <span class="increase-quantity" onclick="increaseQuantity('${key}')"><i class="fas fa-plus"></i></span>
             <span class="cancel" onclick="decreaseQuantity('${key}')"><i class="fas fa-minus"></i></span>
         </p>
@@ -184,7 +184,7 @@ function checkOut() {
                 <h4>${value.name}</h4>
                 <p>
                     <span class="quantity">Quantity: ${value.quantity}</span>
-                    <span class="price">Total Harga: Rp.${price}</span>
+                    <span class="price">Total Harga: Rp${price}</span>
 
                 </p>
             </div>
