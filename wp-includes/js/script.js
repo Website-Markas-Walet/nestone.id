@@ -57,23 +57,20 @@ const cartIcon = document.querySelector('.fa-cart-arrow-down')
 const wholeCartWindow = document.querySelector('.whole-cart-window')
 wholeCartWindow.inWindow = 0
 const addToCartBtns = document.querySelectorAll('.add-to-cart-btn')
-addToCartBtns.forEach( (btn)=>{
-    btn.addEventListener('click',  addItemFunction)
-}  )
-
-const cartBtns = document.querySelectorAll('.cart-btn')
-cartBtns.forEach( (btn)=>{
+const CartBtns = document.querySelectorAll('.cart-btn')
+CartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
-
+addToCartBtns.forEach( (btn)=>{
+    btn.addEventListener('click', addItemFunction)
+}  )
 
 function addItemFunction(e){
     const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id")
     const name = e.target.parentElement.previousElementSibling.textContent
-    const desc = e.target.parentElement.children[0].textContent
     let price = e.target.parentElement.children[1].textContent
     price = price.replace("Rp", '')
-    const item = new CartItem(name, desc, price)
+    const item = new CartItem(name, price)
     LocalCart.addItemToLocalCart(id, item)
  console.log(price)
 }
@@ -142,7 +139,7 @@ function updateCartUI(){
         let root = document.querySelector(':root')
         root.style.setProperty('--after-content', `"${count}"`)
         const subtotal = document.querySelector('.subtotal')
-        subtotal.innerHTML = `Total Harga: Rp${total}`
+        subtotal.innerHTML = `Total Harga: Rp.${total}`
     }
     else
     cartIcon.classList.remove('non-empty')
@@ -191,7 +188,7 @@ function checkOut() {
                 <h4>${value.name}</h4>
                 <p>
                     <span class="quantity">Quantity: ${value.quantity}</span>
-                    <span class="price">Total Harga: Rp${price}</span>
+                    <span class="price">Total Harga: Rp.${price}</span>
 
                 </p>
             </div>
@@ -315,4 +312,24 @@ const nama = document.getElementById('namalengkap').value;
      // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
      addToCartBtn.appendChild(floatingNumber);
    });
+ 
+ 
+    // JavaScript
+    const cartBtn = document.querySelector('.cart-btn');
+ 
+ 
+    cartBtn.addEventListener('click', () => {
+      // Membuat elemen angka yang akan melayang
+      const floatingNumber = document.createElement('span');
+      floatingNumber.classList.add('floating-number');
+      floatingNumber.textContent = '1';
+    
+      // Menambahkan animasi lalu menghapus elemen angka setelah animasi selesai
+      floatingNumber.addEventListener('animationend', () => {
+        floatingNumber.remove();
+      });
+    
+      // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
+      cartBtn.appendChild(floatingNumber);
+    });
 
