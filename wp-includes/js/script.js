@@ -1,6 +1,7 @@
 class CartItem{
-    constructor(name, price){
+    constructor(name, desc, price){
         this.name = name
+        this.desc = desc
         this.price = price
         this.quantity = 1
    }
@@ -27,7 +28,6 @@ class LocalCart{
         cart.set(id, item)
        localStorage.setItem(LocalCart.key,  JSON.stringify(Object.fromEntries(cart)))
        updateCartUI()
-       checkOut()
         
     }
 
@@ -48,7 +48,6 @@ class LocalCart{
     else
     localStorage.setItem(LocalCart.key,  JSON.stringify(Object.fromEntries(cart)))
        updateCartUI()
-       checkOut()
     }
 }
 
@@ -57,10 +56,10 @@ const cartIcon = document.querySelector('.fa-cart-arrow-down')
 const wholeCartWindow = document.querySelector('.whole-cart-window')
 wholeCartWindow.inWindow = 0
 const addToCartBtns = document.querySelectorAll('.add-to-cart-btn')
-const CartBtns = document.querySelectorAll('.cart-btn')
-CartBtns.forEach( (btn)=>{
+addToCartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
+const cartBtns = document.querySelectorAll('.cart-btn')
 addToCartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
@@ -68,9 +67,10 @@ addToCartBtns.forEach( (btn)=>{
 function addItemFunction(e){
     const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id")
     const name = e.target.parentElement.previousElementSibling.textContent
+    const desc = e.target.parentElement.children[0].textContent
     let price = e.target.parentElement.children[1].textContent
-    price = price.replace("Rp.", '')
-    const item = new CartItem(name, price)
+    price = price.replace("Rp", '')
+    const item = new CartItem(name, desc, price)
     LocalCart.addItemToLocalCart(id, item)
  console.log(price)
 }
@@ -118,19 +118,16 @@ function updateCartUI(){
         total = Math.round(total*100)/100
         cartItem.innerHTML =
         `
-                       <div class="details">
-                           <h4>${value.name}</h4>
-                           <p>
-                            <span class="quantity">Quantity: ${value.quantity}</span>
-                               <span class="price">Harga Satuan: Rp.${price}</span>
-                               <span class="increase-quantity" onclick="increaseQuantity('${key}')"><i class="fas fa-plus"></i></span>
-                               <span class="cancel" onclick="decreaseQuantity('${key}')"><i class="fas fa-minus"></i></span>
-                           </p>
-            </div>
-                       
+        <div class="details">
+        <h4>${value.name}</h4>
+        <p>
+         <span class="quantity">Quantity: ${value.quantity}</span>
+            <span class="price">Harga Satuan: Rp.${price}</span>
+            <span class="increase-quantity" onclick="increaseQuantity('${key}')"><i class="fas fa-plus"></i></span>
+            <span class="cancel" onclick="decreaseQuantity('${key}')"><i class="fas fa-minus"></i></span>
+        </p>
+</div>
         `
-
-
         cartWrapper.append(cartItem)
     }
 
@@ -139,7 +136,7 @@ function updateCartUI(){
         let root = document.querySelector(':root')
         root.style.setProperty('--after-content', `"${count}"`)
         const subtotal = document.querySelector('.subtotal')
-        subtotal.innerHTML = `Total Harga: Rp.${total}`
+        subtotal.innerHTML = `Rp${total}`
     }
     else
     cartIcon.classList.remove('non-empty')
@@ -158,8 +155,7 @@ function increaseQuantity(key) {
     checkOut()
   }
   
-
-document.addEventListener('DOMContentLoaded', ()=>{updateCartUI(), checkOut()})
+document.addEventListener('DOMContentLoaded', ()=>{updateCartUI()})
 
 function checkOut() {
     const cartWrapper = document.querySelector('.checkout-item')
