@@ -57,24 +57,37 @@ const cartIcon = document.querySelector('.fa-cart-arrow-down')
 const wholeCartWindow = document.querySelector('.whole-cart-window')
 wholeCartWindow.inWindow = 0
 const addToCartBtns = document.querySelectorAll('.add-to-cart-btn')
+addToCartBtns.forEach( (btn)=>{
+    btn.addEventListener('click',  addItemFunction)
+}  )
+addToCartBtns.forEach( (btn)=>{
+    btn.addEventListener('click', showCartIcon)
+}  )
 const cartBtns = document.querySelectorAll('.cart-btn')
 cartBtns.forEach( (btn)=>{
     btn.addEventListener('click', addItemFunction)
 }  )
-addToCartBtns.forEach( (btn)=>{
-    btn.addEventListener('click', addItemFunction)
+cartBtns.forEach( (btn)=>{
+    btn.addEventListener('click', showCartIcon)
 }  )
 
 function addItemFunction(e){
     const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id")
     const name = e.target.parentElement.previousElementSibling.textContent
+    const desc = e.target.parentElement.children[0].textContent
     let price = e.target.parentElement.children[1].textContent
     price = price.replace("Rp", '')
-    const item = new CartItem(name, price)
+    const item = new CartItem(name, desc, price)
     LocalCart.addItemToLocalCart(id, item)
  console.log(price)
 }
 
+
+function showCartIcon() {
+    if (wholeCartWindow.classList.contains('hide')) {
+        wholeCartWindow.classList.remove('hide')
+    }
+  }
 
 cartIcon.addEventListener('mouseover', ()=>{
 if(wholeCartWindow.classList.contains('hide'))
