@@ -331,21 +331,3 @@ const nama = document.getElementById('namalengkap').value;
      addToCartBtn.appendChild(floatingNumber);
    });
 
-   // JavaScript
-   const addToCartBtn2 = document.querySelector('.add-to-cart-btn2');
-
-
-   addToCartBtn2.addEventListener('click', () => {
-     // Membuat elemen angka yang akan melayang
-     const floatingNumber = document.createElement('span');
-     floatingNumber.classList.add('floating-number');
-     floatingNumber.textContent = '1';
-   
-     // Menambahkan animasi lalu menghapus elemen angka setelah animasi selesai
-     floatingNumber.addEventListener('animationend', () => {
-       floatingNumber.remove();
-     });
-   
-     // Menambahkan elemen angka ke dalam tombol add-to-cart-btn
-     addToCartBtn2.appendChild(floatingNumber);
-   });
