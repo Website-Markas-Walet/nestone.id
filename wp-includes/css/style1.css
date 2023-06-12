@@ -179,6 +179,28 @@ text-align: left;
     color: black;
   }
 
+.add-to-cart-btn2{
+  position: relative;
+    width: fit-content;
+    margin-top:10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: rgb(24, 105, 227);
+    border-radius: 6px;
+    font-size: medium;
+    color:#fff
+}
+
+.add-to-cart-btn2:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #209cfb;
+  }
+
+  .add-to-cart-btn2:active {
+    background-color: #d9efff;
+    color: black;
+  }
+
 .cart-btn{
   position: relative;
     display: inline-block;
