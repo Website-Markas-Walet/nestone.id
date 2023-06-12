@@ -16,7 +16,7 @@ class LocalCart{
         return new Map(Object.entries(JSON.parse(cart)))
     }
 
-    static addItemToLocalCart(id, item){
+     static addItemToLocalCart(id, item){
         let cart = LocalCart.getLocalCartItems()
         if(cart.has(id)){
             let mapItem = cart.get(id)
@@ -186,7 +186,7 @@ function checkOut() {
                 <h4>${value.name}</h4>
                 <p>
                     <span class="quantity">Quantity: ${value.quantity}</span>
-                    <span class="price">Total Harga: Rp${price}</span>
+                    <span class="price">Total Harga: Rp.${price}</span>
 
                 </p>
             </div>
