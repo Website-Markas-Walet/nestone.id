@@ -1,7 +1,6 @@
 class CartItem{
-    constructor(name, desc, price){
+    constructor(name, price){
         this.name = name
-        this.desc = desc
         this.price = price
         this.quantity = 1
    }
@@ -28,6 +27,7 @@ class LocalCart{
         cart.set(id, item)
        localStorage.setItem(LocalCart.key,  JSON.stringify(Object.fromEntries(cart)))
        updateCartUI()
+       checkOut()
         
     }
 
@@ -67,10 +67,9 @@ addToCartBtns.forEach( (btn)=>{
 function addItemFunction(e){
     const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id")
     const name = e.target.parentElement.previousElementSibling.textContent
-    const desc = e.target.parentElement.children[0].textContent
     let price = e.target.parentElement.children[1].textContent
     price = price.replace("Rp", '')
-    const item = new CartItem(name, desc, price)
+    const item = new CartItem(name, price)
     LocalCart.addItemToLocalCart(id, item)
  console.log(price)
 }
@@ -118,16 +117,19 @@ function updateCartUI(){
         total = Math.round(total*100)/100
         cartItem.innerHTML =
         `
-        <div class="details">
-        <h4>${value.name}</h4>
-        <p>
-         <span class="quantity">Quantity: ${value.quantity}</span>
-            <span class="price">Rp${price}</span>
-            <span class="increase-quantity" onclick="increaseQuantity('${key}')"><i class="fas fa-plus"></i></span>
-            <span class="cancel" onclick="decreaseQuantity('${key}')"><i class="fas fa-minus"></i></span>
-        </p>
-</div>
+                       <div class="details">
+                           <h4>${value.name}</h4>
+                           <p>
+                            <span class="quantity">Quantity: ${value.quantity}</span>
+                               <span class="price">Rp${price}</span>
+                               <span class="increase-quantity" onclick="increaseQuantity('${key}')"><i class="fas fa-plus"></i></span>
+                               <span class="cancel" onclick="decreaseQuantity('${key}')"><i class="fas fa-minus"></i></span>
+                           </p>
+            </div>
+                       
         `
+
+
         cartWrapper.append(cartItem)
     }
 
@@ -136,7 +138,7 @@ function updateCartUI(){
         let root = document.querySelector(':root')
         root.style.setProperty('--after-content', `"${count}"`)
         const subtotal = document.querySelector('.subtotal')
-        subtotal.innerHTML = `Total Harga: Rp${total}`
+        subtotal.innerHTML = `Total Harga: Rp.${total}`
     }
     else
     cartIcon.classList.remove('non-empty')
