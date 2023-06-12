@@ -139,7 +139,7 @@ function updateCartUI(){
         let root = document.querySelector(':root')
         root.style.setProperty('--after-content', `"${count}"`)
         const subtotal = document.querySelector('.subtotal')
-        subtotal.innerHTML = `Total Harga: Rp.${total}`
+        subtotal.innerHTML = `Total Harga: Rp${total}`
     }
     else
     cartIcon.classList.remove('non-empty')
@@ -188,7 +188,7 @@ function checkOut() {
                 <h4>${value.name}</h4>
                 <p>
                     <span class="quantity">Quantity: ${value.quantity}</span>
-                    <span class="price">Total Harga: Rp.${price}</span>
+                    <span class="price">Total Harga: Rp${price}</span>
 
                 </p>
             </div>
