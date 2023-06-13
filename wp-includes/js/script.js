@@ -249,7 +249,7 @@ function checkoutViaWhatsApp() {
     const items = LocalCart.getLocalCartItems();
     if (items === null) return;
   
-    let message = 'Halo, saya ingin memesan produk berikut:\n\n';
+    let message = 'Halo Nestone.id, saya ingin memesan produk yang anda tawarkan antara lain sebagai berikut:\n\n';
   
     for (const [key, value] of items.entries()) {
       message += `Produk: ${value.name}\n`;
